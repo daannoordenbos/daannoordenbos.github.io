@@ -3,4 +3,4 @@ layout: default
 title: "Home"
 ---
 
-{% include home.md %}
+My own website.
