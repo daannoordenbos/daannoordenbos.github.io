@@ -3,13 +3,15 @@ title: "CV"
 permalink: "/CV/"
 layout: page
 ---
-
+$nbsp;
+&ensp;
+&emsp;
 # Education
-09/2020 - (now)
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; **Bachelor Econometrics and Operations Research**, University of Groningen, Netherlands 2020 - 2023 (expected)
-
-     **VWO Natuur en Techniek**, Rudolph Pabus Cleveringa Lyceum, Appingedam 2014-2020
-
+09/20
+09/2020 - (now)&emsp;&emsp;&emsp;$nbsp;&ensp;**Bachelor Econometrics and Operations Research**
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$nbsp;University of Groningen                
+09/2014 - 07/2020&emsp;&emsp;**VWO Natuur en Techniek**
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;$nbsp;Rudolph Pabus Cleveringa Lyceum, Appingedam
 # Work experience
 
 # Skills
