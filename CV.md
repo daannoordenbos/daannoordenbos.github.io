@@ -7,7 +7,7 @@ layout: page
 &ensp;
 &emsp;
 # Education
-09/2020 - (now)&nbsp;&nbsp;&nbsp;&nbsp;**Bachelor Econometrics and Operations Research**<br>
+09/2020 - (now)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Bachelor Econometrics and Operations Research**<br>
                             University of Groningen                
 09/2014 - 07/2020&nbsp;&nbsp;**VWO Natuur en Techniek**<br>
                             Rudolph Pabus Cleveringa Lyceum, Appingedam
