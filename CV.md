@@ -7,7 +7,6 @@ layout: page
 &ensp;
 &emsp;
 # Education
-09/20
 09/2020 - (now)&emsp;&emsp;&emsp;&nbsp;&ensp;**Bachelor Econometrics and Operations Research**
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;University of Groningen                
 09/2014 - 07/2020&emsp;&emsp;**VWO Natuur en Techniek**
