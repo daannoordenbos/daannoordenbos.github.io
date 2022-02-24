@@ -8,9 +8,9 @@ layout: page
 &emsp;
 # Education
 09/2020 - (now)&ensp;&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;**Bachelor Econometrics and Operations Research**<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;University of Groningen                
+&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;University of Groningen                
 09/2014 - 07/2020&emsp;&emsp;&emsp;&emsp;&emsp;**VWO Natuur en Techniek**<br>
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rudolph Pabus Cleveringa Lyceum, Appingedam
+&nbsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rudolph Pabus Cleveringa Lyceum, Appingedam
 # Work experience
 
 
