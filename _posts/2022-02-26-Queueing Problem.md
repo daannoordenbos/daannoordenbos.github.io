@@ -22,4 +22,4 @@ $$S=S_0+\sum_{i=1}^NR_i$$
 
 Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we get the result that \\(N|S_0=s\sim\text{Pois}(\lambda s)\\). Therefore we get that
 
-$$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]
+$$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]$$
