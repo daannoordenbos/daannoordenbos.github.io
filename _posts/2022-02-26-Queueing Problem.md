@@ -20,4 +20,4 @@ Because \\(S\\) is our total service time (including interruptions) we get that 
 
 $$S=S_0+\sum_{i=1}^NR_i$$
 
-Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we obtain the conditional distribution of N, namely 
+Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we obtain the conditional distribution of N, namely \\(N|S_0=s\sim\text{Pois}(\lambda s)\\)
