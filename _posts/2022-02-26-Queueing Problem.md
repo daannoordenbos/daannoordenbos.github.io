@@ -20,7 +20,7 @@ Because \\(S\\) is our total service time (including interruptions) we get that 
 
 $$S=S_0+\sum_{i=1}^NR_i$$
 
-Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we obtain the conditional distribution of N, namely \\(N\|S_0=s\sim\text{Pois}(\lambda s)\\). Therefore we get that
+Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we obtain the conditional distribution of N, namely \\(N\mid S_0=s\sim\text{Pois}(\lambda s)\\). Therefore we get that
 
 $$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]$$
 
@@ -38,5 +38,6 @@ Now to determine the results of the second and third terms we will use condition
 
 $$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\mid S_0\right]\right]=E\left[S_0 E[R]E\left[\sum^N_{i=1}1\mid S_0\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
 
+$$E\left[\left(\sum_{i=1}^NR_i\right)^2\right]=E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}^NR_j\right)\right]=E\left[E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}NR_j\right)\mid N\right]\right]=$$
 
 # Clean up
