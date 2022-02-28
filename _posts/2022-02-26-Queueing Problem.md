@@ -23,3 +23,7 @@ $$S=S_0+\sum_{i=1}^NR_i$$
 Where \\(N\\) denotes the amount of interruptions during the service time. Because we assume that the time between interruptions is memoryless we obtain the conditional distribution of N, namely \\(N\|S_0=s\sim\text{Pois}(\lambda s)\\). Therefore we get that
 
 $$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]$$
+
+With this we can go on to the first and second moments of \\(S\\).
+
+$$E[S] = E\left[S_0+\sum_{i=1}^NR_i\right]=E[S_0]+E\left[E\left[\sum_{i=1}^NR_i\right]|N\right]=E[S_0]+E\left[NE[R]\right]=E[S_0]+E[N]E[R]=E[S_0]+\lambda E[S_0]E[R]$$
