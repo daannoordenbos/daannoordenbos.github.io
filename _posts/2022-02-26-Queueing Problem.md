@@ -42,7 +42,7 @@ $$E\left[\left(\sum_{i=1}^NR_i\right)^2\right]=E\left[\left(\sum_{i=1}^NR_i\righ
 
 $$E\left[E\left[\sum_{i=1}^NR_i^2+\sum_{i\ne j}^N R_i R_j\mid N\right]\right]=E\left[NE\left[R^2\right]+N(N-1)E\left[R\right]^2\right]=$$
 
-$$E[N]E\left[R^2\right]+(E\left[N^2\right]-E[N])E[R]^2$$
+$$E[N]E\left[R^2\right]+(E\left[N^2\right]-E[N])E[R]^2=\lambda E[S_0]E[R^2] + \lambda^2 E\left[S_0^2\right]E[R]^2$$
 
 # Clean up
 
