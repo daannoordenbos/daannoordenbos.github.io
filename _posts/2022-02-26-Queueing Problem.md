@@ -36,7 +36,7 @@ $$E\left[S^2\right]=E\left[\left(S_0+\sum_{i=1}^NR_i\right)^2\right]=E\left[S_0^
 
 Now to determine the results of the second and third terms we will use conditioning.
 
-$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\right\|S_0]\right] E\left[S_0 E[R]\sum^N_{i=1}1|\|S_0\left[\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
+$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\mid S_0\right]\right]=E\left[S_0 E[R]E\left[\sum^N_{i=1}1\mid S_0\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
 
 
 # Clean up
