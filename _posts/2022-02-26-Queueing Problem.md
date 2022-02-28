@@ -36,8 +36,12 @@ $$E\left[S^2\right]=E\left[\left(S_0+\sum_{i=1}^NR_i\right)^2\right]=E\left[S_0^
 
 Now to determine the results of the second and third terms we will use conditioning.
 
-$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\mid S_0\right]\right]=E\left[S_0 E[R]E\left[\sum^N_{i=1}1\mid S_0\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
+$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\mid S_0\right]\right]=E\left[S_0 E[R]E\left[N\mid S_0\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
 
 $$E\left[\left(\sum_{i=1}^NR_i\right)^2\right]=E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}^NR_j\right)\right]=E\left[E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}NR_j\right)\mid N\right]\right]=$$
+
+$$E\left[E\left[\sum_{i=1}^NR_i^2+\sum_{i\ne j}^N R_i R_j\mid N\right]\right]=E\left[NE\left[R^2\right]+N(N-1)E\left[R\right]^2\right]=$$
+
+$$E[N]E\left[R^2\right]+(E\left[N^2\right]-E[N])E[R]^2$$
 
 # Clean up
