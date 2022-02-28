@@ -3,7 +3,7 @@ title: "Interesting queueing problem"
 mathjax: true
 layout: post
 ---
-In this post I am going to present an interesting queueing problem, the main intrigue comes from the neat mathematical tricks I will present that one can use to solve this problem.
+In this post I am going to present an interesting queueing problem, it is quite a straightforward problem but going through the computations is a good exercise.
 
 # Introduction
 
