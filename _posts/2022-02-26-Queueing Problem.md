@@ -28,3 +28,5 @@ With this we can go on to the first and second moments of \\(S\\).
 
 $$E[S] = E\left[S_0+\sum_{i=1}^NR_i\right]=E[S_0]+E\left[E\left[\sum_{i=1}^NR_i\right]|N\right]=$$
 $$E[S_0]+E\left[NE[R]\right]=E[S_0]+E[N]E[R]=E[S_0]+\lambda E[S_0]E[R]$$
+
+$$E\left[S^2\right]=E\left[\left(S_0+\sum_{i=1}^NR_i\right)^2\right]=E\left[S_0^2\right]+2E\left[S_0\sum_{i=1}^NR_i\right]+E\left[\left(\sum_{i=1}^NR_i\right)^2\right]$$
