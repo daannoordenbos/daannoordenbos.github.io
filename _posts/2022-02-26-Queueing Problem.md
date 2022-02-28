@@ -14,7 +14,7 @@ $$E[W]=\frac{C^2_a+C^2_s}{2}\frac{\rho}{1-\rho}E[S]\text{, (Sakasewaga's formula
 
 Note that to compute \\(E[W]\\) we need to determine \\(E[S]\\) and \\(E\left[S^2\right]\\), where \\(S\\) is our yet to be determined true service time.
 
-# Mathematical details
+# Computing moments
 
 Because \\(S\\) is our total service time (including interruptions) we get that it is given by
 
@@ -24,10 +24,19 @@ Where \\(N\\) denotes the amount of interruptions during the service time. Becau
 
 $$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]$$
 
-With this we can go on to the first and second moments of \\(S\\).
+$$E[N^2]=E[E[N^2|S_0]]=E[\lambda^2 S_0^2 + \lambda S_0] = \lambda^2 E[S_0^2] + \lambda E[S_0]$$
+
+We will use this result to determine the first and second moments of \\(S\\).
 
 $$E[S] = E\left[S_0+\sum_{i=1}^NR_i\right]=E[S_0]+E\left[E\left[\sum_{i=1}^NR_i\right]|N\right]=$$
 
 $$E[S_0]+E\left[NE[R]\right]=E[S_0]+E[N]E[R]=E[S_0]+\lambda E[S_0]E[R]$$
 
 $$E\left[S^2\right]=E\left[\left(S_0+\sum_{i=1}^NR_i\right)^2\right]=E\left[S_0^2\right]+2E\left[S_0\sum_{i=1}^NR_i\right]+E\left[\left(\sum_{i=1}^NR_i\right)^2\right]$$
+
+Now to determine the results of the second and third terms we will use conditioning.
+
+$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\right\|S_0]\right] E\left[S_0 E[R]\sum^N_{i=1}1|\|S_0\left[\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
+
+
+# Clean up
