@@ -1,6 +1,5 @@
 ---
-title: "Welcome to my blog"
-mathjax: true
+title: "PGN parser"
 layout: post
 ---
 
