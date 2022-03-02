@@ -3,7 +3,7 @@ title: "PGN parser"
 layout: post
 ---
 
-#Henk-Jan Visser (2220) - Daan Noordenbos (2100)
+# Henk-Jan Visser (2220) - Daan Noordenbos (2100)
 KNSB 1A (2), 2021.10.09
 **1.e4** **e6** **2.d4** **d5** **3.&#9816;c3** **&#9815;b4** **4.e5** **c5** **5.a3** **&#9815;xc3+** **6.bxc3** **&#9816;e7** **7.&#9813;g4** **O-O** **8.&#9815;d3** **f5** **9.exf6** **&#9814;xf6** **10.&#9815;g5** **&#9814;f7** **11.&#9813;h5** **g6** **12.&#9813;d1** **&#9813;a5** **13.&#9816;f3** Henk-Jan staat bekend als theoreticus, dus deze stelling is waar de voorbereiding begon **c4** **14.&#9815;e2** **&#9813;xc3+!?** De pointe van c4, nu is de zwarte dame net niet opgesloten. Hier is het ontzettend ingewikkeld om de precieze zetten te vinden **15.&#9815;d2** **&#9813;b2** **16.&#9815;b4** **&#9816;bc6** **17.&#9814;b1** **&#9813;a2** Wit heeft nu een remise met Tb1-a1 **18.&#9815;xe7?!** Dit is niet kritiek, en heeft het ook weinig aandacht gekregen. Hoewel deze opening veel computer zetten bevat, zitten er ook een aantal simpele dynamische zetten in. Ik geef 2 varianten die deze opening het beste samenvatten, choas maken en mindere eindspelen voor zwart 
 
