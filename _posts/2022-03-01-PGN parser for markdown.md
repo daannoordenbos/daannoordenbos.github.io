@@ -3,6 +3,19 @@ title: "PGN parser"
 layout: post
 ---
 
+Since I want to post analysis of my chess games on this blog I needed to find a way of displaying chess games. I could have embedded a lichess game to display my games, but as a small and fun project I decided to create my own parser which takes in a chess game and has as output a markdown file. Chess games are most commonly stored in the .pgn file format. The PGN format is a text-based file format which records moves, comments, variations and game details.
+
+The downside of PGN files is that they are designed to be human readable which makes reading them for a computer very bothersome. Therefore, I used the Python chess library to load in the pgn file and to deal with the chess logic. After loading in the game the parser will traverse the game tree of the game and build up the output text. The output it generates has a few neat features:
+1. Display game details in headers.
+2. Moves in variations use unicode symbols as pieces making it language agnostic and easier to read.
+3. The mainline is **bold**.
+4. Odd variations depths are *italic* to distinguish variations and their sub-variations,
+5. Adding \[D\] in the pgn file will result in a diagram being added in the output.
+6. Support of (basic) numeric annotation glyphs.
+
+The result would be something like the following, which I hope you will agree with looks quite nice.
+
+
 # Edwin de Jonge (1716) - Daan Noordenbos (2107)
 ## NOSBO (3), 2022.03.01
 **1.d4** **&#9816;f6** **2.c4** **g6** **3.&#9816;f3** **&#9815;g7** **4.&#9816;c3** **O-O** **5.e4** **d6** **6.&#9815;e2** **&#9816;bd7** The sideline that I often use against weaker players to avoid the exchange variation of the Kings Indian Defence **7.O-O** **e5** **8.dxe5** **dxe5** **9.&#9813;c2** **&#9816;h5** 
