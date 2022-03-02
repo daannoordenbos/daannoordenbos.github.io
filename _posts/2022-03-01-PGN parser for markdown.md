@@ -46,3 +46,6 @@ layout: post
 
 *41.Kh1* *Re2!!* Deze gemene zet heeft wit gemist toen die voor Tb1-b8 ging *42.Rxc8* *Rxe1+* *43.Kg2* *Re2+* *44.Kg1* *Re1+* *45.Kg2* *Re2+* *46.Kg3* *Re3+* De witte koning is verbannen tot de hoek *47.Kg4* *h5+* *48.Kg5* *Rg3+* Toen ik deze zet zag werd ik wel blij *49.Qxg3* *Qxc8* *50.Kxg6* *Qg4+* *51.Qxg4* *hxg4* 
 **41...Qf3+** Remise 
+
+
+**41...&#9813;f3+**
