@@ -50,8 +50,8 @@ layout: post
 **41...&#9813;f3+** Remise 
  1/2-1/2
  
- # Daan Noordenbos (2100) - Ralf Wahrenberg (1800)
-Leer Open (3), 2021.10.29
+# Daan Noordenbos (2100) - Ralf Wahrenberg (1800)
+## Leer Open (3), 2021.10.29
 **1.e4** **e5** **2.&#9816;f3** **&#9816;c6** **3.&#9815;c4** **&#9816;f6** **4.d3** **&#9815;e7** **5.O-O** **d6** **6.a4** Een aanpak die ik had bedacht voor de partij **&#9815;g4** **7.a5** Normaal doet zwart a7-a5, nu neem ik die mogelijk af **O-O** **8.h3** Even kijken waar de loper naar toe wilt **&#9815;h5** 
 
 *8...&#9815;e6* *9.&#9816;bd2* *&#9815;xc4* *10.dxc4* Dit leek mij nog een interessant idee 
