@@ -3,6 +3,45 @@ title: "PGN parser"
 layout: post
 ---
 
+# Daan Noordenbos (2081) - Joris Kokje (2288)
+## KNSB 1A (1), 2021.09.18
+**1.e4** **c5** **2.&#9816;f3** **d6** **3.d4** **cxd4** **4.&#9816;xd4** **&#9816;f6** **5.&#9816;c3** **a6** **6.&#9815;g5** **&#9816;bd7** **7.f4** Niet de zet die ik normaal speel, maar voor deze partij had ik iets voorbereid **h6** **8.&#9815;h4** **g5!?** 
+
+*8...&#9813;b6* *9.&#9813;d2* *g5* *10.fxg5* *hxg5* *11.&#9815;xg5* *&#9813;xb2* *12.&#9814;b1* *&#9813;a3* Als zwart h6 h5 wilt spelen is dit een betere variant 
+**9.fxg5** **hxg5** **10.&#9815;xg5** **e6?** Dit is niet de juiste manier om te spelen 
+
+*10...b5* zwart heeft nu nog wel compensatie voor de geofferde pion 
+**11.a4!** Tot zover ging de voorbereiding, nu zwart geen b5 meer kan spelen is het best pittig **11...&#9813;a5** 
+
+*11...&#9815;e7* Het beste 
+**12.&#9813;d2** Het is nu een hele moeilijke stelling voor zwart **&#9816;g4** **13.&#9815;e2** **&#9816;ge5** **14.O-O!** En zwart moet nu heel erg oppassen **&#9815;g7** **15.&#9816;d5!!** En nu is het uit **&#9813;c5** Het alternatief verliest ook 
+
+*15...&#9813;xd2* *16.&#9816;c7+* *&#9812;f8* *17.&#9815;xd2* *&#9814;b8* *18.&#9816;cxe6+* *&#9812;g8* *19.&#9816;xg7* *&#9812;xg7* *20.&#9816;f5+* *&#9812;g8* *21.&#9816;xd6* 
+**16.&#9815;e3** 
+
+*16.b4??* *&#9813;xd4+!* *17.&#9813;xd4* *&#9816;f3+* *18.&#9815;xf3* *&#9815;xd4+* *19.&#9815;e3* *&#9815;xa1* *20.&#9816;c7+* *&#9812;d8* *21.&#9816;xa8* 
+**&#9815;h6** 
+
+*16...exd5* *17.&#9816;f5* *&#9813;c7* *18.&#9816;xg7+* *&#9812;e7* *19.&#9813;xd5* 
+**17.b4** **17...&#9815;xe3+** 
+
+*17...&#9816;c4* *18.&#9815;xc4* 
+
+18.&#9815;h5 Is een leuk ideetje, maar het werkt niet. &#9815;xe3+ 
+
+*18...&#9813;xd5* *19.&#9815;xf7+* *&#9812;d8* *20.&#9815;xh6* *&#9816;xd2* *21.exd5* *&#9814;xh6* 
+19.&#9813;xe3 &#9816;xe3 20.&#9815;xf7+ &#9812;d8 21.&#9816;xe6# 
+*18...&#9813;xc4* *19.&#9815;xh6* *exd5* 
+
+19...&#9814;xh6 20.&#9813;xh6 &#9813;xd4+ 21.&#9813;e3 &#9813;xe3+ 22.&#9816;xe3 
+*20.&#9816;f5* 
+**18.&#9813;xe3** **&#9813;a7** **19.&#9816;c7+** **&#9812;d8** **20.&#9816;xa8** **&#9813;xa8** **21.&#9814;ad1** **b6** **22.&#9816;f3** **&#9813;c6** **23.&#9816;xe5** **&#9816;xe5** **24.&#9814;xd6+** Dit maakt het wel makkelijker **&#9813;xd6** **25.&#9814;d1** **&#9813;xd1+** **26.&#9815;xd1** **&#9816;d7** Moet b6 dekken **27.&#9813;g5+** **&#9812;e8** 
+
+*27...&#9812;c7* *28.&#9813;g7* *&#9814;f8* *29.&#9815;h5* 
+**28.h4** **&#9815;b7** **29.&#9815;f3** **&#9815;c6** **30.b5** **axb5** **31.axb5** **&#9815;b7** **32.h5** **f6** **33.&#9813;g7** 
+ 1-0
+
+
 # Henk-Jan Visser (2220) - Daan Noordenbos (2100)
 ## KNSB 1A (2), 2021.10.09
 **1.e4** **e6** **2.d4** **d5** **3.&#9816;c3** **&#9815;b4** **4.e5** **c5** **5.a3** **&#9815;xc3+** **6.bxc3** **&#9816;e7** **7.&#9813;g4** **O-O** **8.&#9815;d3** **f5** **9.exf6** **&#9814;xf6** **10.&#9815;g5** **&#9814;f7** **11.&#9813;h5** **g6** **12.&#9813;d1** **&#9813;a5** **13.&#9816;f3** Henk-Jan staat bekend als theoreticus, dus deze stelling is waar de voorbereiding begon **c4** **14.&#9815;e2** **&#9813;xc3+!?** De pointe van c4, nu is de zwarte dame net niet opgesloten. Hier is het ontzettend ingewikkeld om de precieze zetten te vinden **15.&#9815;d2** **&#9813;b2** **16.&#9815;b4** **&#9816;bc6** **17.&#9814;b1** **&#9813;a2** Wit heeft nu een remise met Tb1-a1 **18.&#9815;xe7?!** Dit is niet kritiek, en heeft het ook weinig aandacht gekregen. Hoewel deze opening veel computer zetten bevat, zitten er ook een aantal simpele dynamische zetten in. Ik geef 2 varianten die deze opening het beste samenvatten, choas maken en mindere eindspelen voor zwart 
