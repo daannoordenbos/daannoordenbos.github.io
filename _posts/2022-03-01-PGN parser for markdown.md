@@ -3,7 +3,7 @@ title: "PGN parser"
 layout: post
 ---
 
-Since I want to post analysis of my chess games on this blog I needed to find a way of displaying chess games. I could have embedded a lichess game to display my games, but as a small and fun project I decided to create my own parser which takes in a chess game and has as output a markdown file. Chess games are most commonly stored in the .pgn file format. The PGN format is a text-based file format which records moves, comments, variations and game details.
+Since I want to post analysis of my chess games on this blog I needed to find a way of displaying chess games. I could have embedded a lichess game to display my games, but as a small and fun project I decided to create [my own parser](https://github.com/daannoordenbos/daannoordenbos.github.io/blob/master/featured_code/pgn_to_markdown_parser.py) which takes in a chess game and has as output a markdown file. Chess games are most commonly stored in the .pgn file format. The PGN format is a text-based file format which records moves, comments, variations and game details.
 
 The downside of PGN files is that they are designed to be human readable which makes reading them for a computer very bothersome. Therefore, I used the Python chess library to load in the pgn file and to deal with the chess logic. After loading in the game the parser will traverse the game tree of the game and build up the output text. The output it generates has a few neat features:
 1. Displays game details in headers.
@@ -44,3 +44,4 @@ The result would be something like the following, which I hope you will agree wi
 *18...&#9814;ae8!* *19.&#9815;d6* *a6* *20.&#9815;xf8* *&#9814;xf8* *21.&#9816;a3* *f5* And the inactive knight is decisive 
 **19.f3** **fxe4** **20.fxe4** **a6** This is a nasty suprise, now it is lost **21.&#9816;a3** **h4** **22.&#9816;b1** **&#9815;h3** **23.&#9816;d2** **&#9814;xf4** A cute finish 
  0-1
+
