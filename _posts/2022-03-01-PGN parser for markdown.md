@@ -3,49 +3,46 @@ title: "PGN parser"
 layout: post
 ---
 
-**1.e4** **e6** **2.d4** **d5** **3.Nc3** **Bb4** **4.e5** **c5** **5.a3** **Bxc3+** **6.bxc3** **Ne7** **7.Qg4** **O-O** **8.Bd3** **f5** **9.exf6** **Rxf6** **10.Bg5** **Rf7** **11.Qh5** **g6** **12.Qd1** **Qa5** **13.Nf3** Henk-Jan staat bekend als theoreticus, dus deze stelling is waar de voorbereiding begon **c4** **14.Be2** **Qxc3+!?** De pointe van c4, nu is de zwarte dame net niet opgesloten. Hier is het ontzettend ingewikkeld om de precieze zetten te vinden **15.Bd2** **Qb2** **16.Bb4** **Nbc6** **17.Rb1** **Qa2** Wit heeft nu een remise met Tb1-a1 **18.Bxe7?!** Dit is niet kritiek, en heeft het ook weinig aandacht gekregen. Hoewel deze opening veel computer zetten bevat, zitten er ook een aantal simpele dynamische zetten in. Ik geef 2 varianten die deze opening het beste samenvatten, choas maken en mindere eindspelen voor zwart 
+**1.e4** **e6** **2.d4** **d5** **3.&#9816;c3** **&#9815;b4** **4.e5** **c5** **5.a3** **&#9815;xc3+** **6.bxc3** **&#9816;e7** **7.&#9813;g4** **O-O** **8.&#9815;d3** **f5** **9.exf6** **&#9814;xf6** **10.&#9815;g5** **&#9814;f7** **11.&#9813;h5** **g6** **12.&#9813;d1** **&#9813;a5** **13.&#9816;f3** Henk-Jan staat bekend als theoreticus, dus deze stelling is waar de voorbereiding begon **c4** **14.&#9815;e2** **&#9813;xc3+!?** De pointe van c4, nu is de zwarte dame net niet opgesloten. Hier is het ontzettend ingewikkeld om de precieze zetten te vinden **15.&#9815;d2** **&#9813;b2** **16.&#9815;b4** **&#9816;bc6** **17.&#9814;b1** **&#9813;a2** Wit heeft nu een remise met Tb1-a1 **18.&#9815;xe7?!** Dit is niet kritiek, en heeft het ook weinig aandacht gekregen. Hoewel deze opening veel computer zetten bevat, zitten er ook een aantal simpele dynamische zetten in. Ik geef 2 varianten die deze opening het beste samenvatten, choas maken en mindere eindspelen voor zwart 
 
-*18.Bd6* *Nf5* *19.Qc1* *c3* *20.Be5* *Nfxd4* *21.Nxd4* *Nxe5* *22.O-O* *Nc4* *23.Nb5* *e5* *24.Bxc4* *Qxc4* *25.Nd6* *Qf4* *26.Nxf7* *Qxc1* *27.Rfxc1* *Kxf7* *28.Rb5* Dit geeft mooi aan hoe moeilijk deze opening is om te spelen, want zwart moet hier 2 pionen offeren *Be6!* *29.Rxb7+* *Kf6!!* *30.Rxh7* *d4* *31.Rb7* *Rc8* *32.f3* *Bf5* *33.Rxa7* *Bxc2* *34.Rxc2* *d3* *35.Rxc3* *Rxc3* 
-
-
-*18.Bc5* *18...Nf5* *19.Qc1* *c3* *20.g4* *b6* *21.gxf5* *bxc5* *22.fxg6* *Rg7* *23.Rg1* *h6* *24.dxc5* *e5* *25.Bb5* *Nd4* *26.Nxd4* *exd4* *27.Rg3* De hoofdvariant van de voorbereiding, niemand die tg3 speelt om de dreiging van d3 te stoppen 
-
-27.Bc6 d3!! Dit lijkt op een computer zet maar is een motief in dit 14...Dxc3!? systeem 
-
-**18...Rxe7** Lichtelijk teleurgesteld, want ik weet dat deze variant niet veel kansen voor zwart breng **19.Qc1** **c3** **20.O-O** **e5** **21.Bb5** **e4** **22.Qg5!** Een sterke zet, ik speel niet tegen een slechte tegenstander. Wit heeft wel ontzettend veel tijd gebruikt, nu kan ik genieten van 87 minuten vs 4 minuten. 
-
-*22.Bxc6* *bxc6* 
-
-22...exf3 23.Qg5 
-*23.Ne5* *Ba6* *24.Nxc6* *Rc7* *25.Nb4* *Qc4* *26.Nxa6* *Qxa6* Hier eindigt deze line 
-**Rf7??** Een blunder dat is wel erg jammer, zelf schaken is niet makkelijk. 
-
-*22...Qxa3!* Ik heb deze zet bekeken maar niet goed beoordeelt *23.Bxc6* 
-
-23.Qxd5+ Be6 24.Qxe4 Ba2 25.Qd3 Bxb1 26.Rxb1 Hier was mijn oordeel: 2 pionen voor een kwaliteit dit is wel prima voor wit vooral die d4 pion is vervelend en dan kan ik mijn c3 pion ook nog verliezen. Maar ik stond al 2 pionen voor dus hier meer dan een beetje compensatie heeft wit niet, compleet verkeerd beoordeeld. 
-*23...bxc6* *24.Ne5* *Qd6* *25.Nxc6* *Rc7* *26.Ne5* In de analyse kwamen we tot de conclusie dat wit compensatie heeft maar dat het ook nog niet zo simpel is. 
-**23.Bxc6** Tja, zo moeilijk is het ook niet. Ik denk dat ik Lxc6 als niet kritische zet heb beschouwt vooral naar Ta1 gekeken. 
-
-*23.Ra1* *Qxc2* *24.Rfc1* *Qb2* *25.Rcb1* *exf3* Geen remise! *26.Rxb2* *cxb2* *27.Rb1* *Bf5* *28.Rxb2* *Nxd4* Dit was wat ik had bedacht 
-**23...bxc6** **24.Ne5** **Ba6** Het lijkt me de enige praktische kans 
-
-*24...Rf5* *25.Qd8+* *Rf8* *26.Qd6* *Qxc2* De c-pion komt niet zover *27.Qxc6* *Rxf2* *28.Rxf2* *Qxb1+* *29.Rf1* *c2* *30.Qe8+* *Kg7* *31.Qf8#* 
-**25.Nxf7** **Kxf7** **26.Qf4+** **Kg7** **27.Qe5+** **Kh6** **28.Qf4+** **Kg7** **29.Qe5+** **Kh6** **30.Rfc1** Wit pakt het rustig aan **Qc4** **31.Re1** **Rf8** **32.Re3** **Bc8** Ik wil vooral irritant zijn **33.h4** Mijn koning is zowel veiliger 
-
-*33.Rb7!* Vindt zulke zetten met een minuut op de klok 
-**33...Qa2** **34.Qg5+** 
-
-*34.Rf1* *Qxc2* *35.Qe7!* 
-**34...Kg7** **35.Rc1** **Qxa3** Zwart is nog niet dood **36.Qe5+** **Kg8** **37.Ree1** **Rf5** **38.Qc7** **Qf8** **39.Rb1?** En wit is gevallen voor de truc 
-
-*39.Qxc6* *Rxf2* *40.Qxd5+* Wint makkelijk 
-**39...Rxf2** **40.Rb8??** 
-
-*40.Rf1* Wit moet terug schakelen *e3* *41.Qxc6* 
-**40...Rxg2+** Wit heeft nu lang nagedacht en speelde Kxg2 en ik bood remise aan na Df3+ het is eeuwigschaak. Maar wat als wit Kh1 speelt? Dat was ook wat wit in eerste instantie van plan was. **41.Kxg2** 
-
-*41.Kh1* *Re2!!* Deze gemene zet heeft wit gemist toen die voor Tb1-b8 ging *42.Rxc8* *Rxe1+* *43.Kg2* *Re2+* *44.Kg1* *Re1+* *45.Kg2* *Re2+* *46.Kg3* *Re3+* De witte koning is verbannen tot de hoek *47.Kg4* *h5+* *48.Kg5* *Rg3+* Toen ik deze zet zag werd ik wel blij *49.Qxg3* *Qxc8* *50.Kxg6* *Qg4+* *51.Qxg4* *hxg4* 
-**41...Qf3+** Remise 
+*18.&#9815;d6* *&#9816;f5* *19.&#9813;c1* *c3* *20.&#9815;e5* *&#9816;fxd4* *21.&#9816;xd4* *&#9816;xe5* *22.O-O* *&#9816;c4* *23.&#9816;b5* *e5* *24.&#9815;xc4* *&#9813;xc4* *25.&#9816;d6* *&#9813;f4* *26.&#9816;xf7* *&#9813;xc1* *27.&#9814;fxc1* *&#9812;xf7* *28.&#9814;b5* Dit geeft mooi aan hoe moeilijk deze opening is om te spelen, want zwart moet hier 2 pionen offeren *&#9815;e6!* *29.&#9814;xb7+* *&#9812;f6!!* *30.&#9814;xh7* *d4* *31.&#9814;b7* *&#9814;c8* *32.f3* *&#9815;f5* *33.&#9814;xa7* *&#9815;xc2* *34.&#9814;xc2* *d3* *35.&#9814;xc3* *&#9814;xc3* 
 
 
-41...&#9813;f3+
+*18.&#9815;c5* *18...&#9816;f5* *19.&#9813;c1* *c3* *20.g4* *b6* *21.gxf5* *bxc5* *22.fxg6* *&#9814;g7* *23.&#9814;g1* *h6* *24.dxc5* *e5* *25.&#9815;b5* *&#9816;d4* *26.&#9816;xd4* *exd4* *27.&#9814;g3* De hoofdvariant van de voorbereiding, niemand die tg3 speelt om de dreiging van d3 te stoppen 
+
+27.&#9815;c6 d3!! Dit lijkt op een computer zet maar is een motief in dit 14...Dxc3!? systeem 
+
+**18...&#9814;xe7** Lichtelijk teleurgesteld, want ik weet dat deze variant niet veel kansen voor zwart breng **19.&#9813;c1** **c3** **20.O-O** **e5** **21.&#9815;b5** **e4** **22.&#9813;g5!** Een sterke zet, ik speel niet tegen een slechte tegenstander. Wit heeft wel ontzettend veel tijd gebruikt, nu kan ik genieten van 87 minuten vs 4 minuten. 
+
+*22.&#9815;xc6* *bxc6* 
+
+22...exf3 23.&#9813;g5 
+*23.&#9816;e5* *&#9815;a6* *24.&#9816;xc6* *&#9814;c7* *25.&#9816;b4* *&#9813;c4* *26.&#9816;xa6* *&#9813;xa6* Hier eindigt deze line 
+**&#9814;f7??** Een blunder dat is wel erg jammer, zelf schaken is niet makkelijk. 
+
+*22...&#9813;xa3!* Ik heb deze zet bekeken maar niet goed beoordeelt *23.&#9815;xc6* 
+
+23.&#9813;xd5+ &#9815;e6 24.&#9813;xe4 &#9815;a2 25.&#9813;d3 &#9815;xb1 26.&#9814;xb1 Hier was mijn oordeel: 2 pionen voor een kwaliteit dit is wel prima voor wit vooral die d4 pion is vervelend en dan kan ik mijn c3 pion ook nog verliezen. Maar ik stond al 2 pionen voor dus hier meer dan een beetje compensatie heeft wit niet, compleet verkeerd beoordeeld. 
+*23...bxc6* *24.&#9816;e5* *&#9813;d6* *25.&#9816;xc6* *&#9814;c7* *26.&#9816;e5* In de analyse kwamen we tot de conclusie dat wit compensatie heeft maar dat het ook nog niet zo simpel is. 
+**23.&#9815;xc6** Tja, zo moeilijk is het ook niet. Ik denk dat ik Lxc6 als niet kritische zet heb beschouwt vooral naar Ta1 gekeken. 
+
+*23.&#9814;a1* *&#9813;xc2* *24.&#9814;fc1* *&#9813;b2* *25.&#9814;cb1* *exf3* Geen remise! *26.&#9814;xb2* *cxb2* *27.&#9814;b1* *&#9815;f5* *28.&#9814;xb2* *&#9816;xd4* Dit was wat ik had bedacht 
+**23...bxc6** **24.&#9816;e5** **&#9815;a6** Het lijkt me de enige praktische kans 
+
+*24...&#9814;f5* *25.&#9813;d8+* *&#9814;f8* *26.&#9813;d6* *&#9813;xc2* De c-pion komt niet zover *27.&#9813;xc6* *&#9814;xf2* *28.&#9814;xf2* *&#9813;xb1+* *29.&#9814;f1* *c2* *30.&#9813;e8+* *&#9812;g7* *31.&#9813;f8#* 
+**25.&#9816;xf7** **&#9812;xf7** **26.&#9813;f4+** **&#9812;g7** **27.&#9813;e5+** **&#9812;h6** **28.&#9813;f4+** **&#9812;g7** **29.&#9813;e5+** **&#9812;h6** **30.&#9814;fc1** Wit pakt het rustig aan **&#9813;c4** **31.&#9814;e1** **&#9814;f8** **32.&#9814;e3** **&#9815;c8** Ik wil vooral irritant zijn **33.h4** Mijn koning is zowel veiliger 
+
+*33.&#9814;b7!* Vindt zulke zetten met een minuut op de klok 
+**33...&#9813;a2** **34.&#9813;g5+** 
+
+*34.&#9814;f1* *&#9813;xc2* *35.&#9813;e7!* 
+**34...&#9812;g7** **35.&#9814;c1** **&#9813;xa3** Zwart is nog niet dood **36.&#9813;e5+** **&#9812;g8** **37.&#9814;ee1** **&#9814;f5** **38.&#9813;c7** **&#9813;f8** **39.&#9814;b1?** En wit is gevallen voor de truc 
+
+*39.&#9813;xc6* *&#9814;xf2* *40.&#9813;xd5+* Wint makkelijk 
+**39...&#9814;xf2** **40.&#9814;b8??** 
+
+*40.&#9814;f1* Wit moet terug schakelen *e3* *41.&#9813;xc6* 
+**40...&#9814;xg2+** Wit heeft nu lang nagedacht en speelde Kxg2 en ik bood remise aan na Df3+ het is eeuwigschaak. Maar wat als wit Kh1 speelt? Dat was ook wat wit in eerste instantie van plan was. **41.&#9812;xg2** 
+
+*41.&#9812;h1* *&#9814;e2!!* Deze gemene zet heeft wit gemist toen die voor Tb1-b8 ging *42.&#9814;xc8* *&#9814;xe1+* *43.&#9812;g2* *&#9814;e2+* *44.&#9812;g1* *&#9814;e1+* *45.&#9812;g2* *&#9814;e2+* *46.&#9812;g3* *&#9814;e3+* De witte koning is verbannen tot de hoek *47.&#9812;g4* *h5+* *48.&#9812;g5* *&#9814;g3+* Toen ik deze zet zag werd ik wel blij *49.&#9813;xg3* *&#9813;xc8* *50.&#9812;xg6* *&#9813;g4+* *51.&#9813;xg4* *hxg4* 
+**41...&#9813;f3+** Remise 
