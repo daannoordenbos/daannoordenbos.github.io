@@ -34,7 +34,7 @@ $$E[S_0]+E\left[NE[R]\right]=E[S_0]+E[N]E[R]=E[S_0]+\lambda E[S_0]E[R]$$
 
 Now we will use (iterated) eve's law for the variance.
 
-$$V[S|S_0,N]=V\left[S_0\sum_{i=1}^NR_i\right]=NV[R]$$
+$$V[S|S_0,N]=V\left[S_0+\sum_{i=1}^NR_i\right]=NV[R]$$
 
 $$V[S|S_0] = E[V[S|S_0,N] |S_0]+ V[E[S|S_0N] |S_0] = \lambda S_0V[R]+ V[S_0 +N E[R] |S_0]$$
 
@@ -44,7 +44,7 @@ $$V[S] = E[V[S|S_0]]+ V[E[S|S_0]] = \lambda (V[R]+(E[R])^2)E[S_0]+ V[(1+\lambda 
 
 $$= \lambda E[R^2]E[S_0]+(1+\lambda E[R])^2V[S_0]$$
 
-The computation of this variation looks straightforward, but one can easily make a mistake in this calculation. When I first tried computing this variance I got the correct result but I used some Illegal steps. Being thorough is important however since probability is hard and miscalculation can easily be made.
+The computation of this variation looks straightforward, but one can easily make a mistake in this calculation. When I first tried computing this variance I got the correct result but I used some Illegal steps. Being thorough is important however this can be especially hard when doing probability calculations since they can be very unintuitive.
 With some algebra we get that
 
 $$C^2_{s} = C^2_{s_0} + \frac{\lambda E\left[R^2\right]\left(1+\lambda E[R]\right)^2}{E[S_0]}$$
