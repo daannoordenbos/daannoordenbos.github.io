@@ -38,7 +38,7 @@ $$V[S|S_0,N]=V\left[S_0\sum_{i=1}^NR_i\right]=NV[R]$$
 
 $$V[S|S_0] = E[V[S|S_0,N] |S_0]+ V[E[S|S_0N] |S_0] = \lambda S_0V[R]+ V[S_0 +N E[R] |S_0]$$
 
-$$= \lambda S_0V[R]+(E[R])2V[N|S_0] = \lambda S_0V[R]+(E[R])2\lambda S_0,$$
+$$= \lambda S_0V[R]+(E[R])2V[N|S_0] = \lambda S_0V[R]+(E[R])2\lambda S_0$$
 
 $$V[S] = E[V[S|S_0]]+ V[E[S|S_0]] = \lambda (V[R]+(E[R])^2)E[S_0]+ V[(1+\lambda E[R])S_0]$$
 
