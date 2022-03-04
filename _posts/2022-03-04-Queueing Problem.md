@@ -1,5 +1,5 @@
 ---
-title: "Interesting queueing problem"
+title: "Tackling a queueing problem"
 mathjax: true
 layout: post
 ---
