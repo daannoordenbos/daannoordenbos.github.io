@@ -26,23 +26,13 @@ $$E[N]=E[E[N|S_0]]=E[\lambda S_0] = \lambda E[S_0]$$
 
 $$E[N^2]=E[E[N^2|S_0]]=E[\lambda^2 S_0^2 + \lambda S_0] = \lambda^2 E[S_0^2] + \lambda E[S_0]$$
 
-We will use this result to determine the first and second moments of \\(S\\).
+We will use this result to determine the expectation and variance of \\(S\\).
 
 $$E[S] = E\left[S_0+\sum_{i=1}^NR_i\right]=E[S_0]+E\left[E\left[\sum_{i=1}^NR_i\right]|N\right]=$$
 
 $$E[S_0]+E\left[NE[R]\right]=E[S_0]+E[N]E[R]=E[S_0]+\lambda E[S_0]E[R]$$
 
-$$E\left[S^2\right]=E\left[\left(S_0+\sum_{i=1}^NR_i\right)^2\right]=E\left[S_0^2\right]+2E\left[S_0\sum_{i=1}^NR_i\right]+E\left[\left(\sum_{i=1}^NR_i\right)^2\right]$$
-
-Now to determine the results of the second and third terms we will use conditioning.
-
-$$E\left[S_0\sum_{i=1}^NR_i\right] = E\left[E\left[S_0\sum_{i=1}^NR_i\mid S_0\right]\right]=E\left[S_0 E[R]E\left[N\mid S_0\right]\right] = E[\lambda S_0^2 E[R]] = \lambda E[R]E[S_0^2]$$
-
-$$E\left[\left(\sum_{i=1}^NR_i\right)^2\right]=E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}^NR_j\right)\right]=E\left[E\left[\left(\sum_{i=1}^NR_i\right)\left(\sum_{i=1}^NR_j\right)\mid N\right]\right]=$$
-
-$$E\left[E\left[\sum_{i=1}^NR_i^2+\sum_{i\ne j}^N R_i R_j\mid N\right]\right]=E\left[NE\left[R^2\right]+N(N-1)E\left[R\right]^2\right]=$$
-
-$$E[N]E\left[R^2\right]+(E\left[N^2\right]-E[N])E[R]^2=\lambda E[S_0]E[R^2] + \lambda^2 E\left[S_0^2\right]E[R]^2$$
+Now we will use (iterated) eve's law for the variance.
 
 # Clean up
 
