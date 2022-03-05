@@ -10,7 +10,7 @@ This page will contain a lists of projects that I am working on or have worked o
 Stratego is a hidden information based boardgame. 
 
 # PGN to markdown parser
-A very useful project for me personally, it parses a .pgn file so that it is in the right markdown format to be displayed on this site. The post about this project can be found **here**
+A very useful project for me personally, it parses a .pgn file so that it is in the right markdown format to be displayed on this site. The post about this project can be found [here](https://daannoordenbos.github.io/PGN-parser-for-markdown/).
 
 # Blockudoku
 Blockudoku is a puzzle game and it is described as “An original combination of Sudoku and block puzzle games”. The goal of this project was to create an agent that was able to outperform humans in the game of Blockudoku. This project marked my first time of dealing with stochasticity in a game and my first time (intentionally) using OOP in Python.
