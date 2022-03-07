@@ -10,13 +10,13 @@ Blockudoku is a puzzle game and it is described as “An original combination of
 <div class="row">
   <div class="column">
       <figure>
-        <img src='/images/blockudoku/quzwEgv.png' alt='missing' style="width:45%"/>
+        <img src='/images/blockudoku/quzwEgv.png' alt='missing' style="width:25%"/>
         <figcaption>fig 1</figcaption>
       </figure>
   </div>
   <div class="column">
       <figure>
-        <img src='/images/blockudoku/h0IjWzM.png' alt='missing' style="width:45%"/>
+        <img src='/images/blockudoku/h0IjWzM.png' alt='missing' style="width:25%"/>
         <figcaption>fig 2</figcaption>
       </figure>
   </div>
