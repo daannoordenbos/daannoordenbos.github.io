@@ -10,7 +10,9 @@ Blockudoku is a puzzle game and it is described as “An original combination of
 
 # Interface
 The graphical user interface needs to keep track of the board, which moves can be made and display the board. The board is stored as a 17x17 matrix consisting of 1's and 0's. This is useful for computing which moves can be made, because to determine where a piece can be place we slide a 5x5 piece matrix over it and perform a check whether or not it can be placed. To implement this pieces are stored as a list of coordinates in the 5x5 grid they exist 
+
 {% highlight python %}
+
 def generate_moves(self, piece):
     result = []
     # loop over all squares
@@ -30,6 +32,7 @@ def generate_moves(self, piece):
                 result.append((i, j))
 
     return result
+    
 {% endhighlight %}
 
 The internal representation also features a make move function
