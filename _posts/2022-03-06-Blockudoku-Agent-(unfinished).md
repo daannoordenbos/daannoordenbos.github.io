@@ -14,7 +14,7 @@ Blockudoku is a puzzle game and it is described as “An original combination of
       </figure>
       <figure>
             <img src='/images/blockudoku/h0IjWzM.png' alt='missing' style="float: left; width: 30%; margin-right: 1%;/>
-            <figcaption>This move will clear a line and Sudoku block</figcaption>
+            <figcaption>The game is terminal</figcaption>
       </figure>
       <p style="clear: both;">
 </div> 
