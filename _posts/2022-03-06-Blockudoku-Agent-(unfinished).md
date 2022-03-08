@@ -51,8 +51,9 @@ The user interface will tell the engine what the current board is and which piec
 
 {% highlight python %}
 class Executable:
-    def __init__(self, path_engine: str = "Executable Path"):
-        self.engine = subprocess.Popen(path_engine, universal_newlines=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+    def __init__(self, path_executable: str = "Executable Path"):
+        self.engine = subprocess.Popen(path_executable, universal_newlines=True, 
+                                       stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
     def _put(self, command):
         if not self.engine.stdin:
