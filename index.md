@@ -7,4 +7,4 @@ layout: page
 
 I am a second year bachelor student of econometrics at the University of Groningen. I am interested in mathematics, programming (especially game playing agents) and chess.
 
-This website will host my CV, my projects and a blog where I write about my projects and chess.
+This website will host my CV, a list of my projects and a blog where I write about projects and chess.
