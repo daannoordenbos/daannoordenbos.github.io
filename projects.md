@@ -20,6 +20,6 @@ A very useful project for me personally, it parses a .pgn file so that it is in 
 
 # Blockudoku
 Blockudoku is a puzzle game and it is described as “An original combination of Sudoku and block puzzle games”. The goal of this project was to create an agent that was able to outperform humans in the game of Blockudoku. This project marked my first time of dealing with stochasticity in a game and my first time (intentionally) using OOP in Python.
-While I had big plans for the project, it turned out that very little is required to essentially 'beat' the puzzle. A full report of the report can be read **here**.
+While I had big plans for the project, it turned out that very little is required to essentially 'beat' the puzzle. A full report of the report can be read [here](https://daannoordenbos.github.io/Blockudoku-Agent/).
 
 # Draughts
