@@ -73,4 +73,4 @@ class Executable:
 {% endhighlight %}
 
 # Closing remarks
-This project was a good experience for me because it was not too difficult, the end product performed above expectation, and I learned how classes work. For anyone interested the source code can be found [my own parser](https://github.com/daannoordenbos/daannoordenbos.github.io/tree/master/featured_code/blockudoku%20code).
+This project was a good experience for me because it was not too difficult, the end product performed above expectation, and I learned how classes work. For anyone interested the source code can be found [here](https://github.com/daannoordenbos/daannoordenbos.github.io/tree/master/featured_code/blockudoku%20code).
