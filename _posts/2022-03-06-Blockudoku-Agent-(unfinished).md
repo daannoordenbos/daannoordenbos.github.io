@@ -49,4 +49,26 @@ This is infact a slight variation on
 # Engine interface connection
 The user interface will tell the engine what the current board is and which pieces it can use. The engine create the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is not more complicated, most of the heavy lifting is done by the following boilerplate code which runs the executable.
 
+{% highlight python %}
+class Executable:
+    def __init__(self, path_engine: str = "Executable Path"):
+        self.engine = subprocess.Popen(path_engine, universal_newlines=True, stdin=subprocess.PIPE, stdout=subprocess.PIPE)
+
+    def _put(self, command):
+        if not self.engine.stdin:
+            raise BrokenPipeError()
+        self.engine.stdin.write(f"{command}\n")
+        self.engine.stdin.flush()
+
+    def _read_line(self):
+        if not self.engine.stdout:
+            raise BrokenPipeError()
+        return self.engine.stdout.readline().strip()
+
+    def interact(self):
+        # interact with the executable
+
+    def kill(self):
+        self.engine.terminate()
+{% endhighlight %}
 # Improvements
