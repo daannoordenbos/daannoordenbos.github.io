@@ -40,7 +40,7 @@ def generate_moves(self, piece):
     return result
 {% endhighlight %}
 
-The rest of the state logic is not noteworthy and can be read in the source code.
+The rest of the state logic is not noteworthy and can be read in the source code. The user interface of the program was built using the Tkinter library. This too can be found in the source code. The user interface is quite minimal but it does feature a score count, the original visuals and a shaded region where the piece will drop if released. Now we will discuss how the agent plays the game.
 
 # Agent
 The agent that plays the game has been written in C++ for performance reasons. The game logic has been implemented in a nearly identical way, except for the fact that it uses static arrays and not lists. To find the best sequence of moves the agent will firstly consider all possible sequences of moves and then pick the sequence with the highest heuristic value. The former is done by considering all orders the pieces can be placed on the board, i.e. 1-2-3, 2-1-3, 3-2-1... . Then for each order the possible ways to place the pieces down is consider, resulting in all possible states using the three available (sub)moves. Then to associate each position with a heuristic value I use the amount of moves that can be made by all 47 pieces. This ensures that it will prefer positions with more options in the future with as intended effect that the game length will be longer. Surprisingly enough this simple algorithm is a very good player of the game of blockudoku. The main downside is that it can be very slow if the board is almost empty. To remedy this I added the condition that if the heuristic value is above a certain threshold that that sequence of moves is considered good enough so it will be played.
@@ -71,4 +71,6 @@ class Executable:
     def kill(self):
         self.executable.terminate()
 {% endhighlight %}
-# Improvements
+
+# Closing remarks
+This project was a good experience for me because it was not too difficult, the end product performed above expectation, and I learned how classes work. For anyone interested the source code can be found [my own parser](https://github.com/daannoordenbos/daannoordenbos.github.io/tree/master/featured_code/blockudoku%20code).
