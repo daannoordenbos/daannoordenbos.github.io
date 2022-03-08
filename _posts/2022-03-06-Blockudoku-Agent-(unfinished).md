@@ -14,6 +14,22 @@ Blockudoku is a puzzle game and it is described as “An original combination of
   <img src="/images/blockudoku/h0IjWzM.png" width="45%" />
 </p>
 
+<figure>
+    <img src='image.jpg' alt='missing' />
+    <figcaption>Caption goes here</figcaption>
+</figure>
+
+
+<p align="middle">
+  <figure>
+    <img src="/images/blockudoku/quzwEgv.png" width="45%" /> 
+    <figcaption>Caption goes here</figcaption>
+  </figure>
+  <figure>
+    <img src="/images/blockudoku/h0IjWzM.png" width="45%" />
+    <figcaption>Caption goes here</figcaption>
+  </figure>
+</p>
 
 
 # Interface
