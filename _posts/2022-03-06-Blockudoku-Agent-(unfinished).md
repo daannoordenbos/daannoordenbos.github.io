@@ -42,8 +42,6 @@ def generate_moves(self, piece):
 
 The rest of the state logic is not noteworthy and can be read in the source code.
 
-This is infact a slight variation on 
-
 # Agent
 
 # Engine interface connection
@@ -51,25 +49,25 @@ The user interface will tell the engine what the current board is and which piec
 
 {% highlight python %}
 class Executable:
-    def __init__(self, path_executable: str = "Executable Path"):
-        self.engine = subprocess.Popen(path_executable, universal_newlines=True, 
+    def __init__(self, path_executable):
+        self.executable = subprocess.Popen(path_executable, universal_newlines=True, 
                                        stdin=subprocess.PIPE, stdout=subprocess.PIPE)
 
     def _put(self, command):
-        if not self.engine.stdin:
+        if not self.executable.stdin:
             raise BrokenPipeError()
-        self.engine.stdin.write(f"{command}\n")
-        self.engine.stdin.flush()
+        self.executable.stdin.write(f"{command}\n")
+        self.executable.stdin.flush()
 
     def _read_line(self):
-        if not self.engine.stdout:
+        if not self.executable.stdout:
             raise BrokenPipeError()
-        return self.engine.stdout.readline().strip()
+        return self.executable.stdout.readline().strip()
 
     def interact(self):
         # interact with the executable
 
     def kill(self):
-        self.engine.terminate()
+        self.executable.terminate()
 {% endhighlight %}
 # Improvements
