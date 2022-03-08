@@ -16,7 +16,7 @@ Blockudoku is a puzzle game and it is described as “An original combination of
 </div>
 
 # Interface
-The graphical user interface needs to keep track of the board, which moves can be made and display the board. The board is stored as a 17x17 matrix consisting of 1's and 0's. This is useful for computing which moves can be made, because to determine where a piece can be place we slide a 5x5 piece matrix over it and perform a check whether or not it can be placed. To implement this pieces are stored as a list of coordinates in the 5x5 grid they exist. This gives rise to the move generating function. 
+The graphical user interface needs to keep track of the board, which moves can be made and display the board. The board is stored as a 17x17 matrix consisting of 1's and 0's. This is useful for computing which moves can be made, because to determine where a piece can be place we slide a 5x5 piece matrix over it and perform a check whether it can be placed. To implement this pieces are stored as a list of coordinates in the 5x5 grid they exist. This gives rise to the move generating function. 
 
 {% highlight python %}
 
@@ -43,9 +43,10 @@ def generate_moves(self, piece):
 The rest of the state logic is not noteworthy and can be read in the source code.
 
 # Agent
+The agent that plays the game has been written in C++ for performance reasons. The game logic has been implemented in a nearly identical way, except for the fact that it uses static arrays and not lists. To find the best sequence of moves the agent will firstly consider all possible sequences of moves and then pick the sequence with the highest heuristic value. The former is done by considering all orders the pieces can be placed on the board, i.e. 1-2-3, 2-1-3, 3-2-1... . Then for each order the possible ways to place the pieces down is consider, resulting in all possible states using the three available (sub)moves. Then to associate each position with a heuristic value I use the amount of moves that can be made by all 47 pieces. This ensures that it will prefer positions with more options in the future with as intended effect that the game length will be longer. Surprisingly enough this simple algorithm is a very good player of the game of blockudoku. The main downside is that it can be very slow if the board is almost empty. To remedy this I added the condition that if the heuristic value is above a certain threshold that that sequence of moves is considered good enough so it will be played.
 
 # Engine interface connection
-The user interface will tell the engine what the current board is and which pieces it can use. The engine create the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is quite straightforward, it is an mostly boilerplate code to run the executable. However I will show this boilerplate code since I believe that is very useful.
+The user interface will tell the engine what the current board is and which pieces it can use. The engine creates the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is quite straightforward, it is mostly boilerplate code to run the executable. However, I will show this boilerplate code since I believe that it can be applied in many circumstances.
 
 {% highlight python %}
 class Executable:
