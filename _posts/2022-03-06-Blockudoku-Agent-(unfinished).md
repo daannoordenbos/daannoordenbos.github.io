@@ -37,16 +37,16 @@ def generate_moves(self, piece):
                     break
             if add_move:
                 result.append((i, j))
-
     return result
 {% endhighlight %}
 
-The internal representation also features a make move function
+The rest of the state logic is not noteworthy and can be read in the source code.
 
 This is infact a slight variation on 
 
 # Agent
 
 # Engine interface connection
+The user interface will tell the engine what the current board is and which pieces it can use. The engine create the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is not more complicated, most of the heavy lifting is done by the following boilerplate code which runs the executable.
 
 # Improvements
