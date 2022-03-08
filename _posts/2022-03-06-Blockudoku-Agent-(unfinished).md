@@ -47,7 +47,7 @@ This is infact a slight variation on
 # Agent
 
 # Engine interface connection
-The user interface will tell the engine what the current board is and which pieces it can use. The engine create the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is not more complicated, most of the heavy lifting is done by the following boilerplate code which runs the executable.
+The user interface will tell the engine what the current board is and which pieces it can use. The engine create the specified game state and compute the sequence it thinks is best. This sequence is then told to the user interface. The integration of the engine into the user interface is quite straightforward, it is an mostly boilerplate code to run the executable. However I will show this boilerplate code since I believe that is very useful.
 
 {% highlight python %}
 class Executable:
