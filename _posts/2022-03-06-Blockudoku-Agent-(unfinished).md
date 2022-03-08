@@ -10,8 +10,8 @@ Blockudoku is a puzzle game and it is described as “An original combination of
 
 **add images**
 <p float="left">
-  <img src="/images/blockudoku/quzwEgv.png" width="100" /> 
-  <img src="/images/blockudoku/h0IjWzM.png" width="100" />
+  <img src="/images/blockudoku/quzwEgv.png" width="45%" /> 
+  <img src="/images/blockudoku/h0IjWzM.png" width="45%" />
 </p>
 
 
