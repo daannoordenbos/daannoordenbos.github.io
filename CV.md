@@ -10,6 +10,6 @@ layout: page
 
 # Skills
 1. Comfortable with **Python**.
-2. Have written game playing agents in **C++**, however prodominantly C-style C++.
+2. Have written game playing agents in **C++**, however predominantly C-style C++.
 3. Comfortable with **LaTeX**.
 4. Comfortable with **Excel** and have worked with **R** (when required, I prefer Python) and **Stata**.
