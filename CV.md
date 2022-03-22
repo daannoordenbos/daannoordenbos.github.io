@@ -10,17 +10,14 @@ layout: page
 
 # Work experience
 **Teaching Assistant, University of Groningen**
-
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022)
 
 
 **Gardener, Hoveniersbedrijf Jonas Lindenhoff, Sappemeer**
-
 Bricklaying and garden maintance, 32 hours per week (06/2021 - 08/2021)
 
 
 **Stock clerk, AH Zweepe, Siddeburen**
-
 Stock clerk, 10 hours per week (07/06/2018 - 06/2019)
 
 # Skills
