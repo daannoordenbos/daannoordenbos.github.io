@@ -1,5 +1,5 @@
 ---
-title: "Tackling a queueing problem"
+title: "Endgame play in Amazons"
 mathjax: true
 layout: post
 ---
@@ -9,7 +9,6 @@ layout: post
 Recently my development of my Amazons playing agent has been focused on the last phase of the game, the filling phase.
 The filling phase is the phase of the game where there is no uncontested territory, so the goal for both players is to make optimal use of their captured territory.
 When a territory cannot be filled completely it is called defective. Minimax search can have trouble identifying defective regions, since they only reveal themselves at the end of a search. **example**
-Here engines
 
 Instead of adapting minimax search I will device a different method for playing out these endgames.
 
@@ -19,13 +18,17 @@ Firstly
 
 # Solving small Amazons chambers
 To start of we will define what a region and a chamber is:
+
 **Definition:** A region is a set of squares in the grid such that all squares have at least one neighbour in on of the 8 surrounding squares. The size of a region is the amount of squares in the region.  
+
 **Definition:** A chamber is a region with only amazons in it of one color.
+
 From the definition of a region the natural question that arises is how many different regions are there of size of size \\(n\\) and subsequently, when are two regions different?
 Starting with the latter, we say that regions \\(A\\) and \\(B\\) are different when they cannot be transformed into each other with transformations that do not change the properties of a region.
 The transformations that have this property are spatial shifts, reflections and 90 degree rotations. **example**
 
 Using this definition of equivalence we can address our first question.
+
 **Definition:** Let \\(S_n\\) be set the of all unique regions of size n.
 
 This also raised the question 
