@@ -19,7 +19,7 @@ Firstly
 # Solving small Amazons chambers
 To start of we will define what a region and a chamber is:
 
-**Definition:** A region is a set of squares in the grid such that all squares have at least one neighbour in on of the 8 surrounding squares. The size of a region is the amount of squares in the region.  
+**Definition:** A region is a set of squares in the grid such that all squares have at least one neighbour on one of the 8 surrounding squares. The size of a region is the amount of squares in the region.  
 
 **Definition:** A chamber is a region with only amazons in it of one color.
 
