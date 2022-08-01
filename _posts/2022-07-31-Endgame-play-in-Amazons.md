@@ -24,36 +24,34 @@ From the definition of a region the natural question that arises is how many dif
 Starting with the latter, we say that regions \\(A\\) and \\(B\\) are different when they cannot be transformed into each other with transformations that do not change the properties of a region.
 The transformations that have this property are spatial shifts, reflections and 90 degree rotations. **example** **explanation**
 
-With this definition of equivalence we can determine the amount of unique regions of size \\(n\\). Firstly, let use denote the set of all unique regions of size \\(n\\) by \\(S_n\\). Then if we have a region \\(s\in S_n\\) and a square \\(k\in s\\) we can create a new region \\(t\\) of size \\(n+1\\) by adding a square to \\(s\\) which is not in \\(s\\) and surrounding \\(k\\). Note that for any \\(k\\) there might be multiple surrounding squares we could add to \\(s\\) to get a new region of size \\(n+1\\). If we do this for all \\(k \in s\\), we get a set of chambers of size \\(n+1\\). Let us denote this procedure as \\(T=f(s)\\), where T is the new set. Here is the key point, since \\(S_n\\) contains all regions of size n, we must have that \\(S_{n+1}\subseteq f(S_n)\\). So to go from \\(S_n\\) to \\(S_{n+1}\\) all that is required is to filter out all isomorphisms from \\(f(S_n)\\).
+With this definition of equivalence we can determine the amount of unique regions of size \\(n\\). Firstly, let use denote the set of all unique regions of size \\(n\\) by \\(S_n\\). Then if we have a region \\(s\in S_n\\) and a square \\(k\in s\\) we can create a new region \\(t\\) of size \\(n+1\\) by adding a square to \\(s\\) which is not in \\(s\\) and surrounding \\(k\\). Note that for any \\(k\\) there might be multiple surrounding squares we could add to \\(s\\) to get a new region of size \\(n+1\\). If we do this for all \\(k \in s\\), we get a set of chambers of size \\(n+1\\). Let us denote this procedure as \\(T=f(s)\\), where T is the new set. Here is the key point, since \\(S_n\\) contains all regions of size n, we must have that \\(S_{n+1}\subseteq f(S_n)\\). So to go from \\(S_n\\) to \\(S_{n+1}\\) all that is required is to filter out all isomorphisms from \\(f(S_n)\\). Lastly, since we know that \\(S_1\\) is a single square, we can coompute all \\(S_n\\).
+## Pseudocode
 
+{% highlight python %}
 
-With this definition of equivalence we can determine the amount of unique regions of size n. Firstly let us  let the set of all these regions be denoted by \\(S_n\\).
-
-This also raised the question 
-An important concept is that two regions can by isomorphic to each other.
-## Generating all regions up to isomorphism
-To start 
-### Definitions and idea
-- Definition: A region is a set of connected squares in the grid (That is all tiles have a neighbour in one of the 8 surrounding squares). The size of a region is the amount of squares in the region.
-- Chambers are equivilant under spatial translation, reflections and 90 degree rotations. So when region A can be transformed into region B using shifts, reflections and rotations we say that they are equivilant up to 'shift symmetry'.
-- Definition: Let S_n be the set of all unique chambers of size n (unique up to shift symmetry).
-- If we have a region s \in S_n and a square k \in s then we can create a new region t of size n+1 by taking s and adding a square not in s and surrounding k. Note that for any k there might be multiple surrounding squares we could add to s to get a new region of size n+1. If we do this for all k \in s, we get a set of chambers of size n+1. Let us denote this procedure as T=f(s), where T is the new set.
-- Since S_n contains all unique chambers of size n we have that S_{n+1}\subset f(S_n).
-- If we then filter out all isomorphisms out of f(S_n), we get S_{n+1}.
-- There is only one region in S_1, namely a single square on the grid. Because we know S_1 we can compute all S_n k\in\mathbb{N}.
-
-### Results
-
-### Pseudo code
-AllRegion = [S_1]
+limit = n
+AllRegions = [S_1]
 while (size < limit):
-    NewRegion = []
-    for region in AllRegion:
-        NewRegion.add(f(region))
-    for region in NewRegion:
-        for symmetry in shift_symmetry:
-            if region.symmetry not in AllCRegion:
-                AllRegion.add(region)
+    NewRegions = []
+    for region in AllRegions:
+        NewRegions.add(f(region))
+    for region in NewRegions:
+        new_region = true
+        for transformation in transformations:
+            new_region &= (region.transformation in AllRegions):
+        if new_region:
+            AllRegions.add(region)
+    size += 1  
+
+f(s):
+    t = []
+    for k in s:
+        for neighbor around k:
+            if neighbor not in s:
+                t.add(s + neighbor)
+    return t
+{% endhighlight %}
+    
                 
 ## Computing the defect of all chambers
 ### Definition defect
