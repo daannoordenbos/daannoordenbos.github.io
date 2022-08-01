@@ -20,7 +20,7 @@ Firstly
 To start of we will define what a region and a chamber is:\
 **Definition:** A region is a set of squares in the grid such that all squares have at least one neighbour on one of the 8 surrounding squares. The size of a region is the amount of squares in the region.\
 **Definition:** A chamber is a region with only amazons in it of one color.\
-From the definition of a region the natural question that arises is how many different regions are there of size of size \\(n\\) and subsequently, when are two regions different?
+From the definition of a region the natural question that arises is how many different regions are there of size \\(n\\) and subsequently, when are two regions different?
 Starting with the latter, we say that regions \\(A\\) and \\(B\\) are different when they cannot be transformed into each other with transformations that do not change the properties of a region.
 The transformations that have this property are spatial shifts, reflections and 90 degree rotations. The last two transformations are the more interesting ones, when combining them there are at most eight possible equivalent representations of a region.
 <p align="middle">
@@ -110,5 +110,7 @@ int EndgameDefect (board, amazon):
     	    amazon_square = GetAmazonSquare(region)
     	    return Defect(amazon_square, representation)
     return 0 
+
+
 ## References
 [Muller & Tegos 2002] Muller, M., & Tegos, T. (2002). Experiments in Computer Amazons.
