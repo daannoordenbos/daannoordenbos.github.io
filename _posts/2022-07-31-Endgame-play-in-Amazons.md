@@ -58,6 +58,8 @@ f(s):
 {% endhighlight %}
 ## Results
 
+<center>
+
 |     Size    | Total | Reduced |
 |:-----------:|:-----:|:-------:|
 | 1           | 1     | 1       |
@@ -68,6 +70,8 @@ f(s):
 | 6           | 3832  | 524     |
 | 7           | 23592 | 3031    |
 | \\(\le 7\\) | 28197 | 3679    |
+  
+</center>
              
 ## Computing the defect of all chambers
 ### Definition defect
