@@ -58,7 +58,6 @@ f(s):
 {% endhighlight %}
 ## Results
 
-<p style="text-align: center;">
 |     Size    | Total | Reduced |
 |:-----------:|:-----:|:-------:|
 | 1           | 1     | 1       |
@@ -69,7 +68,7 @@ f(s):
 | 6           | 3832  | 524     |
 | 7           | 23592 | 3031    |
 | \\(\le 7\\) | 28197 | 3679    |
-</p>               
+             
 ## Computing the defect of all chambers
 ### Definition defect
 - Let there be a chamber s of size n with only one amazon in it on the square k \in s. If the amazon shoots m arrows in the region s, then the defect of a region is n - m - 1 and the space in the region is m.
