@@ -57,8 +57,7 @@ f(s):
     return t
 {% endhighlight %}
 ## Results
-
-<center>
+In the table below the amount of regions of a particular size up to 7 are reported. The total column has been filtered up to only spatial translations and the reduced column has been filtered up to spatial translations, reflections and rotations.
 
 |     Size    | Total | Reduced |
 |:-----------:|:-----:|:-------:|
@@ -69,10 +68,10 @@ f(s):
 | 5           | 638   | 94      |
 | 6           | 3832  | 524     |
 | 7           | 23592 | 3031    |
-| \\(\le 7\\) | 28197 | 3679    |
-  
-</center>
-             
+| \\(\le\\)7  | 28197 | 3679    |
+
+These results are in accordance with Muller & Tegos (2002).
+
 ## Computing the defect of all chambers
 ### Definition defect
 - Let there be a chamber s of size n with only one amazon in it on the square k \in s. If the amazon shoots m arrows in the region s, then the defect of a region is n - m - 1 and the space in the region is m.
@@ -111,3 +110,5 @@ int EndgameDefect (board, amazon):
     	    amazon_square = GetAmazonSquare(region)
     	    return Defect(amazon_square, representation)
     return 0 
+## References
+[Muller & Tegos 2002] Muller, M., & Tegos, T. (2002). Experiments in Computer Amazons.
