@@ -17,9 +17,8 @@ To do this I first build a database of small endgames.
 Firstly 
 
 # Solving small Amazons chambers
-To start of we will define what a region and a chamber is:\
+To start of we will define what a region is:\
 **Definition:** A region is a set of squares in the grid such that all squares have at least one neighbour on one of the 8 surrounding squares. The size of a region is the amount of squares in the region.\
-**Definition:** A chamber is a region with only amazons in it of one color.\
 From the definition of a region the natural question that arises is how many different regions are there of size \\(n\\) and subsequently, when are two regions different?
 Starting with the latter, we say that regions \\(A\\) and \\(B\\) are different when they cannot be transformed into each other with transformations that do not change the properties of a region.
 The transformations that have this property are spatial shifts, reflections and 90 degree rotations. The last two transformations are the more interesting ones, when combining them there are at most eight possible equivalent representations of a region.
@@ -29,7 +28,7 @@ The transformations that have this property are spatial shifts, reflections and 
 <div align="center">
   Eight regions which are equivalent to each other.
 </div>
-With this definition of equivalence we can determine the amount of unique regions of size \\(n\\). Firstly, let use denote the set of all unique regions of size \\(n\\) by \\(S_n\\). Then if we have a region \\(s\in S_n\\) and a square \\(k\in s\\) we can create a new region \\(t\\) of size \\(n+1\\) by adding a square to \\(s\\) which is not in \\(s\\) and surrounding \\(k\\). Note that for any \\(k\\) there might be multiple surrounding squares we could add to \\(s\\) to get a new region of size \\(n+1\\). If we do this for all \\(k \in s\\), we get a set of chambers of size \\(n+1\\). Let us denote this procedure as \\(T=f(s)\\), where \\(T\\) is the new set. Here is the key point, since \\(S_n\\) contains all regions of size n, we must have that \\(S_{n+1}\subseteq f(S_n)\\). So to go from \\(S_n\\) to \\(S_{n+1}\\) all that is required is to filter out all isomorphisms from \\(f(S_n)\\). Lastly, since we know that the only element in \\(S_1\\) is a region consisting of a single square we can compute all \\(S_n\\). The pseudocode for the general procedure is given below.
+With this definition of equivalence we can determine the amount of unique regions of size \\(n\\). Firstly, let use denote the set of all unique regions of size \\(n\\) by \\(S_n\\). Then if we have a region \\(s\in S_n\\) and a square \\(k\in s\\) we can create a new region \\(t\\) of size \\(n+1\\) by adding a square to \\(s\\) which is not in \\(s\\) and surrounding \\(k\\). Note that for any \\(k\\) there might be multiple surrounding squares we could add to \\(s\\) to get a new region of size \\(n+1\\). If we do this for all \\(k \in s\\), we get a set of regions of size \\(n+1\\). Let us denote this procedure as \\(T=f(s)\\), where \\(T\\) is the new set. Here is the key point, since \\(S_n\\) contains all regions of size n, we must have that \\(S_{n+1}\subseteq f(S_n)\\). So to go from \\(S_n\\) to \\(S_{n+1}\\) all that is required is to filter out all isomorphisms from \\(f(S_n)\\). Lastly, since we know that the only element in \\(S_1\\) is a region consisting of a single square we can compute all \\(S_n\\). The pseudocode for the general procedure is given below.
 ## Pseudocode
 
 {% highlight python %}
