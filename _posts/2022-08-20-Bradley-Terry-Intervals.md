@@ -37,6 +37,10 @@ We get the maximum likelihood estimate for \\(\boldsymbol{\beta}\\) by maximizin
 
 # Maximizing the log-likelihood
 
+To maximize the likelihood we will use a method first given by Zermelo in 1929. Given any starting \\(\boldsymbol{\beta}^{(0)}\\), we update it in the following way
+$$\beta_k^{(t+1)}=\ln\left(\sum^n_{j=1}w_{kj}\right)-\ln\left(\sum_{j\ne k}\frac{w_{kj}+w_{jk}}{e^{\beta_k^{(t)}}+e^{\beta_j^{(t)}}}\right).$$
+This will ensure that \\(\{\boldsymbol{\beta}^{t}\}\\) will converge to the maximum likelihood estimator. To ensure uniqueness all that is required to keep a \\(\beta_k\\) fixed.
+
 # Confidence intervals
 
 To determine the confidence intervals for the parameters we will make use of the likelihood ratio test. If \\(\Theta_0\\) is a restriction on the full parameter space \\(\Theta\\), then likelihood test statistic is given by 
