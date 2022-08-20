@@ -44,8 +44,11 @@ $$\lambda_{\text{LR}}=-2\ln\left(\frac{\text{sup}_{\boldsymbol{\beta}\in\Theta_0
 Asymptotically we have that \\(\lambda_{\text{LR}}\xrightarrow{d}\chi^2\\). Here the \\(\chi ^{2}\\) distribution has degrees of freedom equal to the difference in dimensionality of \\(\Theta\\) and \\(\Theta_0\\).
 
 Subsequently, \\(A_k\\) is a 95 percent confidence interval for \\(\beta_k\\) if, 
+
 $$x\in A_k \Leftrightarrow \lambda_{LR}\le\chi^2_{1,0.95} \text{ using } \Theta_0=\{\boldsymbol{\beta}\in\mathbb{R}^n|\beta_k=x\}.$$
 
-Note that since \\(l(\boldsymbol{\beta})\\) is concave \\(A_k\\) will be convex and therefore connected. As \\(A_k\\) is connected it is defined by its endpoints. We can approximate these by noting the following: \\(\text{sup}_{\boldsymbol{\beta}\in\Theta_0}l(\boldsymbol{\beta})\approx l(\boldsymbol{\beta}^*+x\cdot e_k)\\) with \\(\boldsymbol{\beta}^*=\text{argsup}_{\boldsymbol{\beta}\in\Theta}l(\boldsymbol{\beta})\\). Which will give use that 
+Note that since \\(l(\boldsymbol{\beta})\\) is concave \\(A_k\\) will be convex and therefore connected. As \\(A_k\\) is connected it is defined by its endpoints. We can approximate these by noting the following: 
+$$\text{sup}_{\boldsymbol{\beta}\in\Theta_0}l(\boldsymbol{\beta})\approx l(\boldsymbol{\beta}^*+x\cdot e_k)\\) with \\(\boldsymbol{\beta}^*=\text{argsup}_{\boldsymbol{\beta}\in\Theta}l(\boldsymbol{\beta}).$$
+Which will give use that 
 $$\lambda_{\text{LR}}\approx 2l(\boldsymbol{\beta}^*) - 2l(\boldsymbol{\beta}^*+x\cdot e_k)=-2x\sum^n_{j\ne k}w_{kj}+2\sum^n_{j\ne k}\left(w_{kj}+w_{jk}\right)\left(\ln\left(e^{\beta_k+x}+e^{\beta_j}\right)-\ln\left(e^{\beta_k}+e^{\beta_j}\right)\right).$$ 
 Then the endpoints of \\(A_k\\) can by computed by finding the two roots of \\(\lambda_{\text{LR}}-\chi^2_{1,0.95}=0\\).
