@@ -15,19 +15,20 @@ We will now derive the maximum likelihood estimate and the associated confidence
 
 # Likelihood
 Let us take \\(w_{ij}\\) to be the amount of times that \\(i\\) has beaten \\(j\\). Then the likelihood of \\(i\\) beating \\(j\\) \\(w_{ij}\\) times and \\(j\\) beating \\(i\\) \\(w_{ji}\\) times is given by
-$$
-    \binom{w_{ij}+w_{ji}}{w_{ij}}\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ij}}\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ji}}
-$$
+
+$$\binom{w_{ij}+w_{ji}}{w_{ij}}\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ij}}\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ji}}$$
+
 We can use this to determine the squared likelihood function for all results (it is squared since all results are considered exactly twice).
-$$
-    L(\boldsymbol{\beta})^2=\prod^n_{i}\prod^n_{j}\binom{w_{ij}+w_{ji}}{w_{ij}}\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ij}}\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ji}}
-$$
+
+$$L(\boldsymbol{\beta})^2=\prod^n_{i}\prod^n_{j}\binom{w_{ij}+w_{ji}}{w_{ij}}\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ij}}\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)^{w_{ji}}$$
+
 This will result in the following log-likelihood
-$$
-\begin{aligned}
+
+$$\begin{aligned}
     2l(\boldsymbol{\beta}) &= \sum^n_{i}\sum^n_{j}\left[\log\left(\binom{w_{ij}+w_{ji}}{w_{ij}}\right)+w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)+w_{ji}\log\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)\right]\\
      &\sim \sum^n_{i}\sum^n_{j}\left[w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)+w_{ji}\log\left(\frac{e^{\beta_j}}{e^{\beta_i}+e^{\beta_j}}\right)\right]\\
-     &=2\sum^n_{i}\sum^n_{j}\left[w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)\right]\text{, because we are double counting matches and therefore we have} \\
-     l(\boldsymbol{\beta})&= \sum^n_{i}\sum^n_{j}w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)=\sum^n_{i}\sum^n_{j}w_{ij}\left(\beta_i-\log\left(e^{\beta_i}+e^{\beta_j}\right)\right).
-\end{aligned}
-$$
+     &=2\sum^n_{i}\sum^n_{j}\left[w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)\right].\end{aligned}$$
+     
+Because we are double counting matches and therefore we have
+
+$$l(\boldsymbol{\beta})&= \sum^n_{i}\sum^n_{j}w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)=\sum^n_{i}\sum^n_{j}w_{ij}\left(\beta_i-\log\left(e^{\beta_i}+e^{\beta_j}\right)\right).$$
