@@ -49,7 +49,7 @@ $$x\in A_k \Leftrightarrow \lambda_{LR}\le\chi^2_{1,0.95} \text{ using } \Theta_
 
 Note that since \\(l(\boldsymbol{\beta})\\) is concave \\(A_k\\) will be convex and therefore connected. As \\(A_k\\) is connected it is defined by its endpoints. We can approximate these by noting the following: 
 
-$$\text{sup}_{\boldsymbol{\beta}\in\Theta_0}l(\boldsymbol{\beta})\approx l(\boldsymbol{\beta}^*+x\cdot e_k)\\) with \\(\boldsymbol{\beta}^*=\text{argsup}_{\boldsymbol{\beta}\in\Theta}l(\boldsymbol{\beta}).$$
+$$\text{sup}_{\boldsymbol{\beta}\in\Theta_0}l(\boldsymbol{\beta})\approx l(\boldsymbol{\beta}^*+x\cdot e_k)\text{ with }\boldsymbol{\beta}^*=\text{argsup}_{\boldsymbol{\beta}\in\Theta}l(\boldsymbol{\beta}).$$
 
 Which will give use that 
 $$\lambda_{\text{LR}}\approx 2l(\boldsymbol{\beta}^*) - 2l(\boldsymbol{\beta}^*+x\cdot e_k)=-2x\sum^n_{j\ne k}w_{kj}+2\sum^n_{j\ne k}\left(w_{kj}+w_{jk}\right)\left(\ln\left(e^{\beta_k+x}+e^{\beta_j}\right)-\ln\left(e^{\beta_k}+e^{\beta_j}\right)\right).$$ 
