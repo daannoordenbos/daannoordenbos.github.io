@@ -31,4 +31,4 @@ $$\begin{aligned}
      
 Because we are double counting matches and therefore we have
 
-$$l(\boldsymbol{\beta})&= \sum^n_{i}\sum^n_{j}w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)=\sum^n_{i}\sum^n_{j}w_{ij}\left(\beta_i-\log\left(e^{\beta_i}+e^{\beta_j}\right)\right).$$
+$$l(\boldsymbol{\beta})= \sum^n_{i}\sum^n_{j}w_{ij}\log\left(\frac{e^{\beta_i}}{e^{\beta_i}+e^{\beta_j}}\right)=\sum^n_{i}\sum^n_{j}w_{ij}\left(\beta_i-\log\left(e^{\beta_i}+e^{\beta_j}\right)\right).$$
