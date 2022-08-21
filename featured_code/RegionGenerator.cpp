@@ -42,7 +42,6 @@ int main() {
         std::cout << AllRegions.size() << "\n";
     }
 
-
     return 0;
 }
 
