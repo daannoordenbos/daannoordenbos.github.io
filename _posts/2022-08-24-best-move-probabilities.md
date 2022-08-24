@@ -12,5 +12,5 @@ Let us start at the back, what is the distribution of the winning probability fo
 
 $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)=\int_0^1f_{w_k}(x)\prod^n_{i\ne k}F_{w_i}(x)dx.$$
 
-However, this integral is a cannot be reduced any further.
+However, this integral cannot be reduced any further.
 
