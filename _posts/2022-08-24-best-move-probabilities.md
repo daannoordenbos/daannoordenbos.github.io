@@ -9,6 +9,8 @@ In this post we are going to be considering the following problem. In some game 
 
 # Exact method
 Let us start at the back, what is the distribution of the winning probability for child \\(k\\)? Luckily this problem has already been solve, the winning probability, \\(w_k\\), has a beta distribution. More specifically, \\(w_k\sim\text{Beta}(a_k + 1, b_k + 1)\\). With this we can solve the problem analytically, 
+
 $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)=\int_0^1f_{w_k}(x)\prod^n_{i\ne k}F_{w_i}(x)dx.$$
+
 However, this integral is a cannot be reduced any further.
 
