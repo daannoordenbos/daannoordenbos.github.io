@@ -12,5 +12,14 @@ Let us start at the back, what is the distribution of the winning probability fo
 
 $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)=\int_0^1f_{w_k}(x)\prod^n_{i\ne k}F_{w_i}(x)dx.$$
 
-However, this integral cannot be reduced any further.
+However, this integral cannot be reduced any further. Computing it numerically is fine for relatively small \\(n\\), but for quite large \\(n\\) we find that \\(\prod^n_{i\ne k}F_{w_i}(x)\\) becomes too steep. So instead we use a different method,
+
+$$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)\approx\int_t^1f_{w_k}(x)dx\text{, such that } \sum^n_{i=1}\int_t^1f_{w_k}(x)dx=1.$$
+
+Finding the appropriate \\(t\\) is not difficult, we can use a simple bisection method. The reason that this method is a good approximation is due to the fact that for larger \\(n\\),
+
+$$\prod^n_{i\ne k}F_{w_i}(x)\approx\begin{cases}0\text{, for } x < t\\1\text{, for } x\ge t\end{cases}$$
+
+This method also makes intuitive sense since it looks at the tail ends of the distributions. Which is sensible because we are looking at the maximum. 
+
 
