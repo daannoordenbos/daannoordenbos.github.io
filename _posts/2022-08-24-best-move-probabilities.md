@@ -12,7 +12,10 @@ Let us start at the back, what is the distribution of the winning probability fo
 
 $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)=\int_0^1f_{w_k}(x)\prod^n_{i\ne k}F_{w_i}(x)dx.$$
 
-However, this integral cannot be reduced any further. Computing it numerically is fine for relatively small \\(n\\), but for quite large \\(n\\) we find that \\(\prod^n_{i\ne k}F_{w_i}(x)\\) becomes too ill behaved. However we can still approximate the answer with a different method,
+However, this integral cannot be reduced any further. Computing it numerically is fine for relatively small \\(n\\), but for quite large \\(n\\) we find that \\(\prod^n_{i\ne k}F_{w_i}(x)\\) becomes too ill behaved. 
+
+# Approximation
+Instead of computing it exactly we will have to approximate the answer. This can be done quite effectively with the following method,
 
 $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)\approx\int_t^1f_{w_k}(x)dx\text{, such that } \sum^n_{i=1}\int_t^1f_{w_i}(x)dx=1.$$
 
