@@ -14,7 +14,7 @@ $$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)=\int_0^1f_{w_k}(x)\prod^
 
 However, this integral cannot be reduced any further. Computing it numerically is fine for relatively small \\(n\\), but for quite large \\(n\\) we find that \\(\prod^n_{i\ne k}F_{w_i}(x)\\) becomes too steep. So instead we use a different method,
 
-$$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)\approx\int_t^1f_{w_k}(x)dx\text{, such that } \sum^n_{i=1}\int_t^1f_{w_k}(x)dx=1.$$
+$$P(x_k>\text{max}(x_1,\dots,x_{k-1},x_{k+1},\dots,x_n)\approx\int_t^1f_{w_k}(x)dx\text{, such that } \sum^n_{i=1}\int_t^1f_{w_i}(x)dx=1.$$
 
 Finding the appropriate \\(t\\) is not difficult, we can use a simple bisection method. The reason that this method is a good approximation is due to the fact that for larger \\(n\\),
 
