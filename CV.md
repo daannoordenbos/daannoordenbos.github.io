@@ -10,7 +10,7 @@ layout: page
 
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
-Multivariate Calculus, 10 hours per week (Undergraduate) (2022 and 2023)  <br>
+Multivariate Calculus, 10 hours per week (Undergraduate) (2022)  <br>
 Linear Algebra for EOR, 10 hours per week (Undergraduate) (2023)
 
 
