@@ -11,7 +11,8 @@ layout: page
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022)  <br>
-Linear Algebra for EOR, 10 hours per week (Undergraduate) (2023)
+Linear Algebra for EOR, 10 hours per week (Undergraduate) (2023) <br>
+Queueing Theory and Simulation, 10 hours per week (Undergraduate) (2023)
 
 
 **Gardener, Hoveniersbedrijf Jonas Lindenhoff, Sappemeer** <br />
