@@ -15,6 +15,10 @@ Linear Algebra for EOR, 10 hours per week (Undergraduate) (2023) <br>
 Queueing Theory and Simulation, 10 hours per week (Undergraduate) (2023)
 
 
+**Data analyst, [Data Analytics Team](https://www.analyticsteam.nl/), Groningen**  <br />
+Data analysis, 5 hours per week (09/2022l - present)
+
+
 **Gardener, Hoveniersbedrijf Jonas Lindenhoff, Sappemeer** <br />
 Bricklaying and garden maintance, 32 hours per week (06/2021 - 08/2021)
 
