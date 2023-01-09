@@ -28,5 +28,5 @@ Stock clerk, 10 hours per week (07/06/2018 - 06/2019)
 
 # Technical skills
 - Comfortable with **Python** and **C++**.
-- Comfortable with **LaTeX**.
-- Proficient with **Excel** and have worked with **R** and **Stata**.
+- Proficient with **LaTeX**.
+- Proficient with **Excel**, Comfortable with **R** and have worked with **Stata**.
