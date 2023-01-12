@@ -8,7 +8,7 @@ Today we are going to dive into my first game playing agent, namely my draughts 
 
 # Draught bitboards
 
-<div style="text-align:center"><img ssrc="/images/draughts/board map.png" width="50%" /></div>
+<div style="text-align:center"><img src="/images/draughts/board map.png" width="50%" /></div>
 <div align="center">
   Draughts board bitmapping.
 </div>
