@@ -18,12 +18,10 @@ As mentioned previously, we can make bitboards work in draughts. Because, draugh
 <div align="center">
   Draughts board bitmapping.
 </div>
-This is the main bitmapping that is used in draughts. 
-
-Notice that not all bits are used. Partly because a 64 bit integer has redundancy when only needing to store 50 bits. More importantly however, we see that the bits on positions 10, 21, 32, 43 are missing. This peculiar exclusion ensures that the board has nicer properties. The diagonals can be traversed by adding or subtracting 5 or 6 successively. Moreover, this bitmapping also handles edge detection. If these so called 'ghost' squared would not be included then the bitboard mapping would not have these nice properties. Why this is so useful will become more clear when we move on to the move generation.
+This is the main bitmapping that is used in draughts. Notice that not all bits are used. Partly because a 64 bit integer has redundancy when only needing to store 50 bits. More importantly however, we see that the bits on positions 10, 21, 32, 43 are missing. This peculiar exclusion ensures that the board has nicer properties. The diagonals can be traversed by adding or subtracting 5 or 6 successively. Moreover, this bitmapping also handles edge detection. If these so called 'ghost' squared would not be included then the bitboard mapping would not have these nice properties. Why this is so useful will become more clear when we move on to the move generation.
 
 ## Game state
-Using this bitmapping we can store a draughts game state with three bitboards. We store a bitboard with the white pieces, the black pieces, and the kings. From these three bitboards we can (with elementary operations) retrieve all relevant information. For example, the black men are given as and(black, not(kings)). Furthermore, change any board position into any other by xor'ing all three bitboards with three other bitboards which indicate change. This allows us to make and unmake moves quickly.
+Using this bitmapping we can store a draughts game state with three bitboards. We store a bitboard with the white pieces, the black pieces, and the kings. From these three bitboards we can (with elementary operations) retrieve all relevant information. For example, the black men are given as and(black, not(kings)). Furthermore, we can change any board position into any other by xor'ing all three bitboards with three other bitboards which indicate change. This allows us to make and unmake moves quickly.
 
 # Move Generation
 During move generation we first try to generate the capture moves since we must capture if possible. If there are no captures we generate the sliding moves.
