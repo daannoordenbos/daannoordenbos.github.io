@@ -30,3 +30,159 @@ During move generation we first try to generate the capture moves since we must 
 My initial idea for generating sliding moves was to loop over all the men and check with if statements if they can move forward or not. This would work but, there is a far more elegant solution available. We can use the following combination of bit operations, shift(and(shift(men, x), empty), -x) where men is a bitboard of our men, empty is a bitboard of the empty squares, and x is the direction (5, 6, -5 or -6). The output of this is a bitboard of all men that can move in the specified direction. After which, we can turn the relevant bitboards into move lists using the bit extraction described previously.
 
 There are also some clever and sophisticated tricks one could apply to king sliding moves. However, the majority of the game there are no kings on the board, and when there are kings on the board it is usually a few at most. Therefore, optimizing the king sliding move generation is not important. A simple for loop suffices.
+
+
+
+{% highlight c++ %}
+
+void slide(U64* pos, U64 moves[100][3], int color){
+    U64 empty = aliveSquares & (~(pos[0] | pos[2]));
+    int k = 1;
+    U64 way_1;
+    U64 way_2;
+    U64 white = pos[2] & (~pos[1]);
+    U64 black = pos[0] & (~pos[1]);
+    U64 bit;
+    U64 b = pos[0];
+    U64 kings = pos[1];
+    U64 w = pos[2];
+
+
+    if (color == 1) {
+        way_1 = ((white << 5) & empty) >> 5;
+        way_2 = ((white << 6) & empty) >> 6;
+        while (way_1) {
+            bit = way_1 & -way_1;
+            way_1 = (way_1 - 1) & way_1;
+            moves[k][2] = w ^ bit ^ (bit << 5);
+            moves[k][1] = kings ^ ((bit << 5) & ROW1);
+            moves[k][0] = b;
+
+            k++;
+        }
+        while (way_2) {
+            bit = way_2 & -way_2;
+            way_2 = (way_2 - 1) & way_2;
+            moves[k][2] = w ^ bit ^ (bit << 6);
+            moves[k][1] = kings ^ ((bit << 6) & ROW1);
+            moves[k][0] = b;
+
+            k++;
+        }
+
+    } else {
+        way_1 = ((black >> 5) & empty) << 5;
+        way_2 = ((black >> 6) & empty) << 6;
+        while (way_1) {
+            bit = way_1 & -way_1;
+            way_1 = (way_1 - 1) & way_1;
+            moves[k][0] = b ^ bit ^ (bit >> 5);
+            moves[k][1] = kings ^ ((bit >> 5) & ROB1);
+            moves[k][2] = w;
+
+            k++;
+        }
+        while (way_2) {
+            bit = way_2 & -way_2;
+            way_2 = (way_2 - 1) & way_2;
+            moves[k][0] = b ^ bit ^ (bit >> 6);
+            moves[k][1] = kings ^ ((bit >> 6) & ROB1);
+            moves[k][2] = w;
+
+            k++;
+        }
+    }
+    if (color == 1) {
+        U64 king = pos[1] & pos[2];
+
+        U64 dir;
+        while (king) {
+            bit = king & -king;
+            king &= (king -1);
+
+            dir = bit;
+            while ((empty & (dir << 5)) != 0) {
+                dir = dir << 5;
+                moves[k][2] = w ^ bit ^ dir;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir << 6)) != 0) {
+                dir = dir << 6;
+                moves[k][2] = w ^ bit ^ dir;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir >> 5)) != 0) {
+                dir = dir >> 5;
+                moves[k][2] = w ^ bit ^ dir;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir >> 6)) != 0) {
+                dir = dir >> 6;
+                moves[k][2] = w ^ bit ^ dir;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b;
+                k++;
+            }
+        }
+    } else {
+        U64 king = pos[1] & pos[0];
+
+        U64 dir;
+        while (king) {
+            bit = king & -king;
+            king &= (king -1);
+
+            dir = bit;
+            while ((empty & (dir << 5)) != 0) {
+                dir = dir << 5;
+                moves[k][2] = w;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b ^ bit ^ dir;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir << 6)) != 0) {
+                dir = dir << 6;
+                moves[k][2] = w;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b ^ bit ^ dir;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir >> 5)) != 0) {
+                dir = dir >> 5;
+                moves[k][2] = w;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b ^ bit ^ dir;
+                k++;
+            }
+
+            dir = bit;
+            while ((empty & (dir >> 6)) != 0) {
+                dir = dir >> 6;
+                moves[k][2] = w;
+                moves[k][1] = kings ^ bit ^ dir;
+                moves[k][0] = b ^ bit ^ dir;
+                k++;
+            }
+        }
+    }
+
+    moves[0][0] = k - 1;
+}
+
+{% endhighlight %}
