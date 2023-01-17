@@ -35,154 +35,57 @@ There are also some clever and sophisticated tricks one could apply to king slid
 
 {% highlight c++ %}
 
-void slide(U64* pos, U64 moves[100][3], int color){
-    U64 empty = aliveSquares & (~(pos[0] | pos[2]));
-    int k = 1;
-    U64 way_1;
-    U64 way_2;
-    U64 white = pos[2] & (~pos[1]);
-    U64 black = pos[0] & (~pos[1]);
-    U64 bit;
-    U64 b = pos[0];
-    U64 kings = pos[1];
-    U64 w = pos[2];
+slidingMoves(white, black, kings, whiteToMove, moveList):
+  empty = AND(bitmapping, NOT(OR(white, black)))
+  whiteMen = AND(white, NOT(kings)
+  blackMen = AND(white, NOT(kings)
 
+  if whiteToMove:
+    right = shift(AND(shift(whiteMen, 5), empty), -5)
+	  left = shift(AND(shift(whiteMen, 6), empty), -6)
 
-    if (color == 1) {
-        way_1 = ((white << 5) & empty) >> 5;
-        way_2 = ((white << 6) & empty) >> 6;
-        while (way_1) {
-            bit = way_1 & -way_1;
-            way_1 = (way_1 - 1) & way_1;
-            moves[k][2] = w ^ bit ^ (bit << 5);
-            moves[k][1] = kings ^ ((bit << 5) & ROW1);
-            moves[k][0] = b;
+    while right:
+      bit = AND(right, -right)
+      right = AND(right - 1, right)
+      moveList.append(black, XOR(kings, AND(shift(bit, 5), ROW1)), XOR(white, bit, shift(bit, 5)))
 
-            k++;
-        }
-        while (way_2) {
-            bit = way_2 & -way_2;
-            way_2 = (way_2 - 1) & way_2;
-            moves[k][2] = w ^ bit ^ (bit << 6);
-            moves[k][1] = kings ^ ((bit << 6) & ROW1);
-            moves[k][0] = b;
+    while left:
+      bit = AND(left, -left)
+      left = AND(left - 1, left)
+      moveList.append(black, XOR(kings, AND(shift(bit, 6), ROW1)), XOR(white, bit, shift(bit, 6)))
 
-            k++;
-        }
+    king = AND(white, kings)
+	  while king:
+	    bit = AND(king, -king)
+      king = AND(king - 1, king)
+	    for d in (-6, -5, 5, 6):
+		    option = bit
+	      while AND(empty, shift(option, d)):
+		      option = shift(option, d)
+          moveList.append(black, XOR(kings, bit, option), XOR(white, bit, option))
 
-    } else {
-        way_1 = ((black >> 5) & empty) << 5;
-        way_2 = ((black >> 6) & empty) << 6;
-        while (way_1) {
-            bit = way_1 & -way_1;
-            way_1 = (way_1 - 1) & way_1;
-            moves[k][0] = b ^ bit ^ (bit >> 5);
-            moves[k][1] = kings ^ ((bit >> 5) & ROB1);
-            moves[k][2] = w;
+  else:
+	  right = shift(AND(shift(blackMen, -6), empty), 6)
+	  left = shift(AND(shift(blackMen, -5), empty), 5)
 
-            k++;
-        }
-        while (way_2) {
-            bit = way_2 & -way_2;
-            way_2 = (way_2 - 1) & way_2;
-            moves[k][0] = b ^ bit ^ (bit >> 6);
-            moves[k][1] = kings ^ ((bit >> 6) & ROB1);
-            moves[k][2] = w;
+    while right:
+      bit = AND(right, -right)
+      right = AND(right - 1, right)
+      moveList.append(XOR(black, bit, shift(bit, -6)), XOR(kings, AND(shift(bit, -6), ROW1)), white)
 
-            k++;
-        }
-    }
-    if (color == 1) {
-        U64 king = pos[1] & pos[2];
+    while left:
+      bit = AND(left, -left)
+      left = AND(left - 1, left)
+      moveList.append(XOR(black, bit, shift(bit, -5)), XOR(kings, AND(shift(bit, -5), ROW1)), white)
 
-        U64 dir;
-        while (king) {
-            bit = king & -king;
-            king &= (king -1);
-
-            dir = bit;
-            while ((empty & (dir << 5)) != 0) {
-                dir = dir << 5;
-                moves[k][2] = w ^ bit ^ dir;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir << 6)) != 0) {
-                dir = dir << 6;
-                moves[k][2] = w ^ bit ^ dir;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir >> 5)) != 0) {
-                dir = dir >> 5;
-                moves[k][2] = w ^ bit ^ dir;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir >> 6)) != 0) {
-                dir = dir >> 6;
-                moves[k][2] = w ^ bit ^ dir;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b;
-                k++;
-            }
-        }
-    } else {
-        U64 king = pos[1] & pos[0];
-
-        U64 dir;
-        while (king) {
-            bit = king & -king;
-            king &= (king -1);
-
-            dir = bit;
-            while ((empty & (dir << 5)) != 0) {
-                dir = dir << 5;
-                moves[k][2] = w;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b ^ bit ^ dir;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir << 6)) != 0) {
-                dir = dir << 6;
-                moves[k][2] = w;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b ^ bit ^ dir;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir >> 5)) != 0) {
-                dir = dir >> 5;
-                moves[k][2] = w;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b ^ bit ^ dir;
-                k++;
-            }
-
-            dir = bit;
-            while ((empty & (dir >> 6)) != 0) {
-                dir = dir >> 6;
-                moves[k][2] = w;
-                moves[k][1] = kings ^ bit ^ dir;
-                moves[k][0] = b ^ bit ^ dir;
-                k++;
-            }
-        }
-    }
-
-    moves[0][0] = k - 1;
-}
-
+	king = AND(black, kings)
+	while king:
+	  bit = AND(king, -king)
+    king = AND(king - 1, king)
+	  for d in (-6, -5, 5, 6):
+		  option = bit
+		  while AND(empty, shift(option, d)):
+		    option = shift(option, d)
+        moveList.append(XOR(black, bit, option), XOR(kings, bit, option), white)
+        
 {% endhighlight %}
