@@ -34,58 +34,56 @@ There are also some clever and sophisticated tricks one could apply to king slid
 
 
 {% highlight c++ %}
-
 slidingMoves(white, black, kings, whiteToMove, moveList):
-  empty = AND(bitmapping, NOT(OR(white, black)))
-  whiteMen = AND(white, NOT(kings)
-  blackMen = AND(white, NOT(kings)
+	empty = AND(bitmapping, NOT(OR(white, black)))
+	whiteMen = AND(white, NOT(kings)
+	blackMen = AND(white, NOT(kings)
 
-  if whiteToMove:
-    right = shift(AND(shift(whiteMen, 5), empty), -5)
-	  left = shift(AND(shift(whiteMen, 6), empty), -6)
+	if whiteToMove:
+		right = shift(AND(shift(whiteMen, 5), empty), -5)
+		left = shift(AND(shift(whiteMen, 6), empty), -6)
 
-    while right:
-      bit = AND(right, -right)
-      right = AND(right - 1, right)
-      moveList.append(black, XOR(kings, AND(shift(bit, 5), ROW1)), XOR(white, bit, shift(bit, 5)))
+		while right:
+		bit = AND(right, -right)
+		right = AND(right - 1, right)
+		moveList.append(black, XOR(kings, AND(shift(bit, 5), ROW1)), XOR(white, bit, shift(bit, 5)))
 
-    while left:
-      bit = AND(left, -left)
-      left = AND(left - 1, left)
-      moveList.append(black, XOR(kings, AND(shift(bit, 6), ROW1)), XOR(white, bit, shift(bit, 6)))
+		while left:
+		bit = AND(left, -left)
+		left = AND(left - 1, left)
+		moveList.append(black, XOR(kings, AND(shift(bit, 6), ROW1)), XOR(white, bit, shift(bit, 6)))
 
-    king = AND(white, kings)
-	  while king:
-	    bit = AND(king, -king)
-      king = AND(king - 1, king)
-	    for d in (-6, -5, 5, 6):
-		    option = bit
-	      while AND(empty, shift(option, d)):
-		      option = shift(option, d)
-          moveList.append(black, XOR(kings, bit, option), XOR(white, bit, option))
+		king = AND(white, kings)
+		while king:
+			bit = AND(king, -king)
+			king = AND(king - 1, king)
+			for d in (-6, -5, 5, 6):
+				option = bit
+				while AND(empty, shift(option, d)):
+					option = shift(option, d)
+					moveList.append(black, XOR(kings, bit, option), XOR(white, bit, option))
+	else:
+		right = shift(AND(shift(blackMen, -6), empty), 6)
+		left = shift(AND(shift(blackMen, -5), empty), 5)
 
-  else:
-	  right = shift(AND(shift(blackMen, -6), empty), 6)
-	  left = shift(AND(shift(blackMen, -5), empty), 5)
+		while right:
+			bit = AND(right, -right)
+			right = AND(right - 1, right)
+			moveList.append(XOR(black, bit, shift(bit, -6)), XOR(kings, AND(shift(bit, -6), ROW1)), white)
 
-    while right:
-      bit = AND(right, -right)
-      right = AND(right - 1, right)
-      moveList.append(XOR(black, bit, shift(bit, -6)), XOR(kings, AND(shift(bit, -6), ROW1)), white)
+		while left:
+			bit = AND(left, -left)
+			left = AND(left - 1, left)
+			moveList.append(XOR(black, bit, shift(bit, -5)), XOR(kings, AND(shift(bit, -5), ROW1)), white)
 
-    while left:
-      bit = AND(left, -left)
-      left = AND(left - 1, left)
-      moveList.append(XOR(black, bit, shift(bit, -5)), XOR(kings, AND(shift(bit, -5), ROW1)), white)
-
-	king = AND(black, kings)
-	while king:
-	  bit = AND(king, -king)
-    king = AND(king - 1, king)
-	  for d in (-6, -5, 5, 6):
-		  option = bit
-		  while AND(empty, shift(option, d)):
-		    option = shift(option, d)
-        moveList.append(XOR(black, bit, option), XOR(kings, bit, option), white)
+		king = AND(black, kings)
+		while king:
+			bit = AND(king, -king)
+			king = AND(king - 1, king)
+			for d in (-6, -5, 5, 6):
+				option = bit
+				while AND(empty, shift(option, d)):
+					option = shift(option, d)
+					moveList.append(XOR(black, bit, option), XOR(kings, bit, option), white)
         
 {% endhighlight %}
