@@ -44,14 +44,14 @@ slidingMoves(white, black, kings, whiteToMove, moveList):
 		left = shift(AND(shift(whiteMen, 6), empty), -6)
 
 		while right:
-		bit = AND(right, -right)
-		right = AND(right - 1, right)
-		moveList.append(black, XOR(kings, AND(shift(bit, 5), ROW1)), XOR(white, bit, shift(bit, 5)))
+			bit = AND(right, -right)
+			right = AND(right - 1, right)
+			moveList.append(black, XOR(kings, AND(shift(bit, 5), ROW1)), XOR(white, bit, shift(bit, 5)))
 
 		while left:
-		bit = AND(left, -left)
-		left = AND(left - 1, left)
-		moveList.append(black, XOR(kings, AND(shift(bit, 6), ROW1)), XOR(white, bit, shift(bit, 6)))
+			bit = AND(left, -left)
+			left = AND(left - 1, left)
+			moveList.append(black, XOR(kings, AND(shift(bit, 6), ROW1)), XOR(white, bit, shift(bit, 6)))
 
 		king = AND(white, kings)
 		while king:
