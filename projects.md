@@ -11,7 +11,7 @@ A very useful project for me personally, it parses a .pgn file so that it is in 
 
 # Game playing agents
 ## Draughts
-The first game playing agent I developed plays draughts, specifically international draughts played on the 10x10 board. The initial focus was on improving the speed and search depth of the move generator and alpha-beta search. With a quite common evaluation function it kept GMI Martin Dolfing to a draw ([game 1](https://lidraughts.org/tJ21UR4b/black), [game 2](https://lidraughts.org/iaELUv9a/white)). Further development focused on using Monte Carlo tree search (MCTS) and different draughts variants. 
+The first game playing agent I developed plays draughts, specifically international draughts played on the 10x10 board. The initial focus was on improving the speed and search depth of the [move generator](https://daannoordenbos.github.io/draughts-move-generator/) and alpha-beta search. With a quite common evaluation function it kept GMI Martin Dolfing to a draw ([game 1](https://lidraughts.org/tJ21UR4b/black), [game 2](https://lidraughts.org/iaELUv9a/white)). Further development focused on using Monte Carlo tree search (MCTS) and different draughts variants. 
 
 ## Blockudoku
 Blockudoku is a puzzle game and it is described as “An original combination of Sudoku and block puzzle games”. The goal of this project was to create an agent that was able to outperform humans in the game of Blockudoku. This project marked my first time of dealing with stochasticity in a game and my first time (intentionally) using OOP in Python. While I had big plans for the project, it turned out that very little is required to essentially 'beat' the puzzle. A full report of the report can be read [here](https://daannoordenbos.github.io/Blockudoku-Agent/).
