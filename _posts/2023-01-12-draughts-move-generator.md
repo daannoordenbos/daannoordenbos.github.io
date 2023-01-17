@@ -34,7 +34,7 @@ There are also some clever and sophisticated tricks one could apply to king slid
 
 
 {% highlight c++ %}
-slidingMoves(white, black, kings, whiteToMove, moveList):
+slidingMoves(state, whiteToMove, moveList):
   empty = AND(bitmapping, NOT(OR(white, black)))
   whiteMen = AND(white, NOT(kings)
   blackMen = AND(white, NOT(kings)
@@ -69,12 +69,12 @@ slidingMoves(white, black, kings, whiteToMove, moveList):
     while right:
       bit = AND(right, -right)
       right = AND(right - 1, right)
-      moveList.append(XOR(black, bit, shift(bit, -6)), XOR(kings, AND(shift(bit, -6), ROW1)), white)
+      moveList.append(XOR(black, bit, shift(bit, -6)), XOR(kings, AND(shift(bit, -6), ROB1)), white)
 
     while left:
       bit = AND(left, -left)
       left = AND(left - 1, left)
-      moveList.append(XOR(black, bit, shift(bit, -5)), XOR(kings, AND(shift(bit, -5), ROW1)), white)
+      moveList.append(XOR(black, bit, shift(bit, -5)), XOR(kings, AND(shift(bit, -5), ROB1)), white)
 
     king = AND(black, kings)
     while king:
@@ -86,4 +86,36 @@ slidingMoves(white, black, kings, whiteToMove, moveList):
           option = shift(option, d)
           moveList.append(XOR(black, bit, option), XOR(kings, bit, option), white)
         
+{% endhighlight %}
+
+{% highlight c++ %}
+manRecursive(state, moveList, depth, whiteToMove, central){
+  empty = AND(bitmapping, NOT(OR(white, black)))
+  opponent = whiteToMove ? black : white
+  noCapture = true
+
+  for d in (-6, -5, 5, 6):
+    if AND(opponent, shift(central, d) and AND(empty, shift(central, 2d):
+      noCapture = false
+      captureStack[depth].set(OR(central, shift(central, 2d)), AND(kings, shift(central, d)), shift(central, d), whiteToMove)
+      state = XOR(state, captureStack[depth])
+      manRecursive(state, moveList, depth + 1, whiteToMove, shift(central, 2d))
+      state = XOR(state, captureStack[depth])
+
+  if noCapture:
+    if depth == moveList.longestCapture:
+      addCapture(moveList, depth)
+
+    else if depth > moveList.longestCapture:
+      moveList.reset()
+      moveList.longestCapture = depth
+      addCapture(moveList, depth)
+
+addCapture(moveList, depth):
+  move = (captureStack[depth][0], captureStack[depth][1], captureStack[depth][2])
+  for i in (1, ..., depth):
+    move = XOR(move, (captureStack[i][0], captureStack[i][1], captureStack[i][2]))
+  move = XOR(move, (captureStack[15][0], captureStack[15][1], captureStack[15][2]))
+  move = OR(move, (AND(move[0], ROB1), 0, AND(move[2], ROW1))
+  moveList.append(move)
 {% endhighlight %}
