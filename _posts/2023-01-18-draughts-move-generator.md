@@ -114,6 +114,34 @@ captureMoves(state, moveList, whiteToMove)
   loop over kings:
     kingRecursive()
 
+manRecursive(state, moveList, depth, whiteToMove, central)
+  empty = AND(bitmapping, NOT(OR(white, black)))
+  opponent = whiteToMove ? black : white
+  noCapture = true
+
+  for d in (-6, -5, 5, 6):
+    if AND(opponent, shift(central, d) and AND(empty, shift(central, 2d):
+      noCapture = false
+      captureStack[depth].set(OR(central, shift(central, 2d)), 
+                              AND(kings, shift(central, d)), shift(central, d), whiteToMove)
+      state = XOR(state, captureStack[depth])
+      manRecursive(state, moveList, depth + 1, whiteToMove, shift(central, 2d))
+      state = XOR(state, captureStack[depth])
+
+  if noCapture:
+    if depth == moveList.longestCapture:
+      addCapture(moveList, pos)
+
+    else if depth > moveList.longestCapture:
+      moveList.reset()
+      moveList.longestCapture = depth
+      addCapture(moveList, pos)
+
+addCapture(moveList, pos):
+  move = pos
+  move = OR(move, (AND(move[0], ROB1), 0, AND(move[2], ROW1))
+  moveList.append(move)
+
 {% endhighlight %}
 
 # Performance
