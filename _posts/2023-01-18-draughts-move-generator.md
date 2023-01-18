@@ -87,10 +87,34 @@ slidingMoves(state, whiteToMove, moveList):
         
 {% endhighlight %}
 
-## Men captures
+## Captures moves
+The difficulty of generating capture moves is that they have a recursive structure, after each partial capture we repeat the same procedure. Therefore, to generate capture moves we must make use of recursion. This is done in the following way, first a valid partial capture is found, then it calls the recursive function to see if any more captures are possible. After there are no more partial captures, the resulting position is added as a succesor. Of course, when a longer capture is found, the list of current moves is cleared, since they are not relevant anymore. One might think that king captures are even more complicated, but they are nearly analogous to men captures, the only difference is that kings are more mobile than men. This can be found in the source code, as it is not interesting enough to discuss here. The pseudo-code we get when taking everything together is displayed below
 
 {% highlight c++ %}
-manRecursive(state, moveList, depth, whiteToMove, central){
+captureMoves(state, moveList, whiteToMove)
+  empty = AND(bitmapping, NOT(OR(white, black)))
+  opponent = whiteToMove ? black : white
+  ourMen = AND((whiteToMove ? white : black), NOT(kings))
+  
+  for d in (-6, -5, 5, 6):
+    options = AND(shift(AND(shift(ourMen, d), opponent), -d),
+                  shift(AND(shift(ourMen, 2d), empty), -2d))
+    while options:
+      bit = AND(options, -options)
+      options = AND(options, options - 1)
+
+      captureStack[0].set(OR(bit, shift(bit, 2d)), 
+                          AND(kings, shift(bit, d)), shift(bit, d), whiteToMove)
+
+      state = XOR(state, captureStack[0])
+      manRecursive(state, moveList, 1, whiteToMove, shift(central, 2d))
+      state = XOR(state, captureStack[0])
+
+  loop over kings:
+    kingRecursive(...)
+
+
+manRecursive(state, moveList, depth, whiteToMove, central)
   empty = AND(bitmapping, NOT(OR(white, black)))
   opponent = whiteToMove ? black : white
   noCapture = true
@@ -106,18 +130,19 @@ manRecursive(state, moveList, depth, whiteToMove, central){
 
   if noCapture:
     if depth == moveList.longestCapture:
-      addCapture(moveList, depth)
+      addCapture(moveList, pos)
 
     else if depth > moveList.longestCapture:
       moveList.reset()
       moveList.longestCapture = depth
-      addCapture(moveList, depth)
+      addCapture(moveList, pos)
 
-addCapture(moveList, depth):
-  move = (captureStack[depth][0], captureStack[depth][1], captureStack[depth][2])
-  for i in (1, ..., depth):
-    move = XOR(move, (captureStack[i][0], captureStack[i][1], captureStack[i][2]))
-  move = XOR(move, (captureStack[15][0], captureStack[15][1], captureStack[15][2]))
+addCapture(moveList, pos):
+  move = pos
   move = OR(move, (AND(move[0], ROB1), 0, AND(move[2], ROW1))
   moveList.append(move)
 {% endhighlight %}
+
+# Performance
+
+The described move generator generates ~130 million successor positions per second from the starting position. This is very comparable to the [best move generators](https://damforum.nl/bb3/viewtopic.php?f=53&t=2308&start=240), which perform marginally better after taking hardware in account. The source code of the move generator can be found [here](https://github.com/daannoordenbos/daannoordenbos.github.io/tree/master/featured_code/draughts%20move%20generator).
