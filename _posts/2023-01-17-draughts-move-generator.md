@@ -91,6 +91,7 @@ slidingMoves(state, whiteToMove, moveList):
 The difficulty of generating capture moves is that they have a recursive structure, after each partial capture we repeat the same procedure. Therefore, to generate capture moves we must make use of recursion. This is done in the following way, first a valid partial capture is found, then it calls the recursive function to see if any more captures are possible. After there are no more partial captures, the resulting position is added as a successor. Of course, when a longer capture is found, the list of current moves is cleared, since they are not relevant anymore. One might think that king captures are even more complicated, but they are nearly analogous to men captures, the only difference is that kings are more mobile than men. This can be found in the source code, as it is not interesting enough to discuss here. The pseudo-code we get when taking everything together is displayed below
 
 {% highlight c++ %}
+
 captureMoves(state, moveList, whiteToMove)
   empty = AND(bitmapping, NOT(OR(white, black)))
   opponent = whiteToMove ? black : white
@@ -141,6 +142,7 @@ addCapture(moveList, pos):
   move = pos
   move = OR(move, (AND(move[0], ROB1), 0, AND(move[2], ROW1))
   moveList.append(move)
+  
 {% endhighlight %}
 
 # Performance
