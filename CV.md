@@ -11,8 +11,8 @@ layout: page
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022)  <br>
-Linear Algebra for EOR, 10 hours per week (Undergraduate) (2023) <br>
-Queueing Theory and Simulation, 10 hours per week (Undergraduate) (2023)
+Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
+Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023)
 
 
 **Data analyst, [Data Analytics Team](https://www.analyticsteam.nl/), Groningen**  <br />
