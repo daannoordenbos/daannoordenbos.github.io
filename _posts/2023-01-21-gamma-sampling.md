@@ -4,7 +4,7 @@ mathjax: true
 layout: post
 ---
 
-Computer generated random numbers are an interesting field of study, computers are deterministic so they cannot make random numbers, yet the 'random' sequences that are created look indistinguishable from true random sequences. Most of the time computers generate random 32 or 64 bit integers, these integers are the building blocks for all other random numbers that are generated. Specifically, they can be turned into to random uniform numbers between 0 and 1. With these numbers we can sample from various other continuous and discrete distributions.
+Computer generated random numbers are an interesting field of study, computers are deterministic so they cannot make random numbers, yet the 'random' sequences that are created look indistinguishable from true random sequences. Most commonly computers generate random 32 or 64 bit integers, these integers are the building blocks for all other random numbers that are generated. Specifically, they can be turned into to random uniform numbers between 0 and 1. With these numbers we can sample from various other continuous and discrete distributions.
 In this post we will build up to sampling from a Gamma distribution, which is will hopefully make clear how we can sample from any distribution.
 
 # Inverse method
@@ -17,6 +17,7 @@ The inverse method is not applicable to the normal distribution, since the CDF d
 To sample from an arbitrary random variable \\(X\\) with PDF \\(f_X(t)\\) and support \\(I\\), we need to employ a Monte Carlo like method. Firstly, let \\(L=\text{max}f_X(t)\\) so we can bound \\(f_X(t)\\) by the set \\(A\\) given by,
 
 $$A=\{(x,y)\in\mathbb{R}^2|x\in I, y\in[0, L]\}.$$
-Now sample a point, \\(s_1=(p_x,p_y)\\), uniformly from \\(A\\), if \\(\frac{p_y}{L}\le f_X(t)\\) we keep the point, otherwise we repeat until this holds. After (repeated) sampling we have that \\(s_x\sim X\\). The figure below gives an obvious intuition as to why this holds.
 
-Whilst the method described above works in theory, it is bad in practice since, we will have to resample many times.
+Now sample a point, \\(s_1=(p_x,p_y)\\), uniformly from \\(A\\), if \\(\frac{p_y}{L}\le f_X(t)\\) we keep the point, otherwise we repeat until this holds. After (repeated) sampling we have that \\(s_x\sim X\\). The figure below gives an obvious intuition as to why this holds.
+<div style="text-align:center"><img src="/images/rejection.png" width="75%" /></div>
+Whilst the method described above works in theory, it is bad in practice since, we will have to resample many times. We can improve this method by using a better bound than just a rectangle, specifically another PDF. Let \\(Y\\) have PDF \\(f_Y(t)\\) such that for some \\(M\\) we have that \\(f_X(t)\le M f_Y(t)\\). Then to sample from \\(X\\) we first sample \\(y\\) from \\(Y\\) and keep it if \\(u<\frac{f_X(y)}{f_Y(y)}\\) and otherwise repeat, with \\(u\sim\text{unif}\\).
