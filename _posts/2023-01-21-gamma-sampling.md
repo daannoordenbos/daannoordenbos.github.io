@@ -1,5 +1,5 @@
 ---
-title: "Approximating the best move probabilities"
+title: "Sampling from a Gamma distribution"
 mathjax: true
 layout: post
 ---
