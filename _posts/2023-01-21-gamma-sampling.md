@@ -51,7 +51,7 @@ $$\phi(\frac{1}{\alpha}\log{U})=\mathbb{E}\left[e^{\frac{it}{\alpha}\log{U}}\rig
 With this one can verify that \\(\phi(\log{X_{\alpha}}) = \phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
 
 # Scaling
-We have found a way of sampling from \\(\text{Gamma](\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma](\alpha,\beta)=\frac{1}{\beta}\text{Gamma](\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. This post is based on [A Simple Method for Generating Gamma Variables](https://dl.acm.org/doi/pdf/10.1145/358407.358414) by George Marsaglia and Wai Wan Tsang. Below is the c code that can do the sampling
+We have found a way of sampling from \\(\text{Gamma}(\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma}(\alpha,\beta)=\frac{1}{\beta}\text{Gamma}(\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. This post is based on [A Simple Method for Generating Gamma Variables](https://dl.acm.org/doi/pdf/10.1145/358407.358414) by George Marsaglia and Wai Wan Tsang. Below is the c code that can do the sampling
 
 
 {% highlight c++ %}
