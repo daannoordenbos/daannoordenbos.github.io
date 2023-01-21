@@ -25,14 +25,17 @@ Whilst the method described above works in theory, it is bad in practice since, 
 # Gamma sampling
 With the preliminaries out of the way, we focus on the case at hand: Sampling from a Gamma distribution. Firstly, let us focus on \\(\alpha > 1\\) and \\(\beta=1\\), the relevant PDF is then given by
 
-$$F_X(t)=\frac{1}{\Gamma(\alpha)}t^{\alpha-1}e^{-t}.$$
+$$f_X(t)=\frac{1}{\Gamma(\alpha)}t^{\alpha-1}e^{-t}.$$
 
 Moreover, we define the random variable \\(Y\\) by following PDF,
 
-$$F_X(t)=\frac{1}{\Gamma(\alpha)}h(t)^{\alpha-1}e^{-h(t)}h'(t) \implies X=h(Y).$$
+$$f_Y(t)=\frac{1}{\Gamma(\alpha)}h(t)^{\alpha-1}e^{-h(t)}h'(t) \implies X=h(Y).$$
 
-We will pick an \\(h(\cdot)\\) such that \\(Y\\) is close to a normal distribution. This technique can be applied in many cases. A desirable \\(h(\cdot)\\) exists, namely \\(h(t)=d(1+ct)^3\\) with \\(d=\alpha - \frac{1]{3}\\) and \\(c=(9d)^{-\frac{1}{2}}\\).
+This subsitution trick can often work to find a an envelope PDF from which we can sample. We will pick an \\(h(\cdot)\\) such that \\(Y\\) is close to a normal distribution, so our rejection rate is low. A desirable \\(h(\cdot)\\) exists, namely \\(h(t)=d(1+ct)^3\\) with \\(d=\alpha - \frac{1}{3}\\) and \\(c=(9d)^{-\frac{1}{2}}\\) (see main paper as to why). Now convienintly (but not coincidentally) we have that for \\(M=\frac{f_X(t)}{f_Y(t)}\\) that \\(f_X(t)\le M f_Y(t)\\) for all \\(t\\). So, we sample \\(x\\) from a standard normal and accept it if 
 
+$$\log{U}\le \frac{1}{2}y^2+d-h(y)+d\log{h(y)}-\log{d}\text{, where }U\sim\text{unif}(0,1).$$
+
+otherwise we repeat. If accepted we return \\(h(y)\\) as our Gamma sample.
 # Special case: \\(\alpha<1\\)
 When \\(\alpha<1\\), the above method does not work. But, we can still generate the samples with the following identity
 
@@ -51,7 +54,7 @@ $$\phi(\frac{1}{\alpha}\log{U})=\mathbb{E}\left[e^{\frac{it}{\alpha}\log{U}}\rig
 With this one can verify that \\(\phi(\log{X_{\alpha}}) = \phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
 
 # Scaling
-We have found a way of sampling from \\(\text{Gamma}(\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma}(\alpha,\beta)=\frac{1}{\beta}\text{Gamma}(\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. Below is the c code that can do the sampling
+We have found a way of sampling from \\(\text{Gamma}(\alpha,1)\\), with this we can easily allow for \\(\beta\in\mathbb{R}^+\\) using \\(\text{Gamma}(\alpha,\beta)=\frac{1}{\beta}\text{Gamma}(\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. Below is the c code that can do the sampling
 
 
 {% highlight c++ %}
