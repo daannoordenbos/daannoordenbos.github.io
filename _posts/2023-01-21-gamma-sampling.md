@@ -5,7 +5,7 @@ layout: post
 ---
 
 Computer generated random numbers are an interesting field of study, computers are deterministic so they cannot make random numbers, yet the 'random' sequences that are created look indistinguishable from true random sequences. Most commonly computers generate random 32 or 64 bit integers, these integers are the building blocks for all other random numbers that are generated. Specifically, they can be turned into to random uniform numbers between 0 and 1. With these numbers we can sample from various other continuous and discrete distributions.
-In this post we will build up to sampling from a Gamma distribution, which is will hopefully make clear how we can sample from any distribution.
+In this post we will build up to and discuss [A Simple Method for Generating Gamma Variables](https://dl.acm.org/doi/pdf/10.1145/358407.358414) by George Marsaglia and Wai Wan Tsang, since the Gamma distribution is very important for sampling other distributions (Chi, Beta, Dirichlet... ). Hopefully the discussed technique will make clear how we can sample from any distribution (in theory).
 
 # Inverse method
 First of all, let us recall a nice result from probability theory. Let \\(X\\) have CDF \\(F_X(t)\\), then \\(X\sim F_X^{-1}(U)\\) where \\(U\sim\text{unif}(0,1)\\). So, if the CDF of the distribution has an easy to compute inverse we can sample the distribution directly. This allows us to sample from distributions like the exponential, weibull, and even exotic ones like the log-logistic.
@@ -31,7 +31,7 @@ Moreover, we define the random variable \\(Y\\) by following PDF,
 
 $$F_X(t)=\frac{1}{\Gamma(\alpha)}h(t)^{\alpha-1}e^{-h(t)}h'(t) \implies X=h(Y).$$
 
-We will pick an \\(h(\cdot)\\) such that \\(Y\\) is close to a normal distribution.
+We will pick an \\(h(\cdot)\\) such that \\(Y\\) is close to a normal distribution. This technique can be applied in many cases. A desirable \\(h(\cdot)\\) exists, namely \\(h(t)=d(1+ct)^3\\) with \\(d=\alpha - \frac{1]{3}\\) and \\(c=(9d)^{-\frac{1}{2}}\\).
 
 # Special case: \\(\alpha<1\\)
 When \\(\alpha<1\\), the above method does not work. But, we can still generate the samples with the following identity
@@ -51,7 +51,7 @@ $$\phi(\frac{1}{\alpha}\log{U})=\mathbb{E}\left[e^{\frac{it}{\alpha}\log{U}}\rig
 With this one can verify that \\(\phi(\log{X_{\alpha}}) = \phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
 
 # Scaling
-We have found a way of sampling from \\(\text{Gamma}(\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma}(\alpha,\beta)=\frac{1}{\beta}\text{Gamma}(\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. This post is based on [A Simple Method for Generating Gamma Variables](https://dl.acm.org/doi/pdf/10.1145/358407.358414) by George Marsaglia and Wai Wan Tsang. Below is the c code that can do the sampling
+We have found a way of sampling from \\(\text{Gamma}(\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma}(\alpha,\beta)=\frac{1}{\beta}\text{Gamma}(\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. Below is the c code that can do the sampling
 
 
 {% highlight c++ %}
