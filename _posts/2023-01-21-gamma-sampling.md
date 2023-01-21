@@ -31,9 +31,9 @@ Moreover, we define the random variable \\(Y\\) by following PDF,
 
 $$F_X(t)=\frac{1}{\Gamma(\alpha)}h(t)^{\alpha-1}e^{-h(t)}h'(t) \implies X=h(Y).$$
 
-We will pick an \\(h(\cdot)\\) such that $Y$ is close to a normal distribution.
+We will pick an \\(h(\cdot)\\) such that \\(Y\\) is close to a normal distribution.
 
-# \\(\alpha<1\\)
+# Special case: \\(\alpha<1\\)
 When \\(\alpha<1\\), the above method does not work. But, we can still generate the samples with the following identity
 
 $$X_{\alpha}\sim X_{\alpha + 1}U^{1/\alpha}\text{, with }X_p\sim\text{Gamma}(p, 1) \text{ and } U\sim\text{unif}(0,1).$$
@@ -48,4 +48,40 @@ $$\phi(\log{X_p})=\mathbb{E}\left[e^{it\log{X_p}}\right]=\mathbb{E}\left[X_p^{it
 
 $$\phi(\frac{1}{\alpha}\log{U})=\mathbb{E}\left[e^{\frac{it}{\alpha}\log{U}}\right]=\mathbb{E}\left[U^{\frac{it}{\alpha}}\right]=\frac{\alpha}{\alpha+it}$$
 
-With this one can verify that \\(\phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
+With this one can verify that \\(\phi(\log{X_{\alpha}}) = \phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
+
+# Scaling
+We have found a way of sampling from \\(\text{Gamma](\alpha,1)\\), with this we can easily allow for \\(\beta\neq1\\) using \\(\text{Gamma](\alpha,\beta)=\frac{1}{\beta}\text{Gamma](\alpha,1)\\). This concludes the dicussing of sampling from a Gamma distribution. This post is based on [A Simple Method for Generating Gamma Variables](https://dl.acm.org/doi/pdf/10.1145/358407.358414) by George Marsaglia and Wai Wan Tsang. Below is the c code that can do the sampling
+
+
+{% highlight c++ %}
+double randomGamma (double alpha, double beta)
+{
+    double d, c, x, xSquared, v, u;
+    if (alpha >= 1.0)
+    {
+        d = alpha - 1.0 / 3.0;
+        c = 1.0 / sqrt(9.0 * d);
+        while (true)
+        {
+            v = -1;
+            while (v <= 0)
+            {
+                x = randomNormal(0, 1);
+                v = 1.0 + c * x;
+            }
+            v = v * v * v;
+            u = randomUniform();
+            xSquared = x * x;
+            if (u < 1.0 - 0.0331 * xSquared * xSquared || log(u) < 0.5 * xSquared + d * (1.0 - v + log(v)))
+                return d * v / beta;
+        }
+    }
+    else
+    {
+        double g = randomGamma(alpha + 1.0, 1.0);
+        double w = randomUniform(0, 1);
+        return g * pow(w, 1.0 / alpha) / beta;
+    }
+}
+{% endhighlight %}
