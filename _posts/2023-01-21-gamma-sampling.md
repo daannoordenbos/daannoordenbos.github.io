@@ -44,3 +44,8 @@ $$X_{\alpha}\sim X_{\alpha + 1}U^{1/\alpha} \Leftrightarrow \log{X_{\alpha}}\sim
 
 $$\log{X_{\alpha}}\sim\log{X_{\alpha+1}}+\frac{1}{\alpha}\log{U}\Leftrightarrow \phi(\log{X_{\alpha}}) = \phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})$$
 
+$$\phi(\log{X_p})=\mathbb{E}\left[e^{it\log{X_p}}\right]=\mathbb{E}\left[X_p^{it}\right]=\frac{\Gamma(p+it)}{\Gamma(p)}.$$
+
+$$\phi(\frac[1}{\alpha}\log{U})=\mathbb{E}\left[e^{\frac{it}{\alpha}\log{U}}\right]=\mathbb{E}\left[U^{\frac{it}{\alpha}}\right]=\frac{\alpha}{\alpha+it}$$
+
+With this one can verify that \\(\phi(\log{X_{\alpha+1}})\phi(\frac{1}{\alpha}\log{U})\\).
