@@ -4,7 +4,7 @@ layout: post
 ---
 
 # Jawad Bendaoud (2140) - Daan Noordenbos (2114)
-## Blitz (?), 2023.01.03
+## Blitz, 2023.01.03
 **38.&#9816;d3?** The game 
 
 *38.&#9816;c4+* Most pragmatic, white keeps a long term advantage. *&#9812;c7* *39.f3* *g6* *40.&#9812;e5* *&#9812;d7* *41.&#9816;d2* *&#9812;e7* *42.&#9816;e4* *&#9816;g7* *43.&#9816;g5* *&#9816;f5* *44.&#9816;xh7* *&#9816;h4* *45.&#9812;xf4* *&#9816;xg2+* *46.&#9812;e4* 
