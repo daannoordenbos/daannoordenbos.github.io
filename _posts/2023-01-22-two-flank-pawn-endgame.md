@@ -1,5 +1,5 @@
 ---
-title: "Pawn endgame: Boring and insightful"
+title: "Insightful pawn endgame"
 layout: post
 ---
 
