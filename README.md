@@ -1,2 +1,2 @@
-This blog was created on 23rd of February 2022, it has been created from the Jekyll theme contrast.
-I plan to host my CV and a chess blog on this website.
+This is the Github repository hosting my website. On my website you can my public CV and my blog about mathematics and chess. 
+This project has been made with the the Jekyll theme contrast.
