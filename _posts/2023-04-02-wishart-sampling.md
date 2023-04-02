@@ -14,7 +14,7 @@ Where \\(\mathrm{IW}\\) denotes the inverse Wishart distribution which is the mu
 $$\boldsymbol{G}_1,\dots,\boldsymbol{G}_{\nu}\sim\mathcal{N}\left(\boldsymbol{0},\Psi^{-1}\right)\text{ and }\boldsymbol{S}=[\boldsymbol{G}_1\dots\boldsymbol{G}_{\nu}],$$
 
 then \\(\boldsymbol{S}\boldsymbol{S}^T\sim\mathrm{IW}(\boldsymbol{\Psi},\nu)\\) (Fink, 1997).
-Using the definition we can easily sample from an inverse Wishart distribution. Let \\(\boldsymbol{X}\sim \text{W}(I_k, n)\\) then \\(L \boldsymbol{X}^{-1}L^T\sim \text{IW}(\boldsymbol{\Psi}, n)\\), where \\(L\\) is the Cholesky decomposition of \\(\boldsymbol{\Psi}\\). The following C++ code, using the Eigen library, can do this super fast.
+Using the definition we can easily sample from an inverse Wishart distribution. Let \\(\boldsymbol{X}\sim \text{W}(I_k, n)\\) then \\(L \boldsymbol{X}^{-1}L^T\sim \text{IW}(\boldsymbol{\Psi}, n)\\), where \\(L\\) is the Cholesky decomposition of \\(\boldsymbol{\Psi}\\). The following C++ code, using the Eigen library, can do this very quickly.
 
 {% highlight c++ %}
 Eigen::MatrixXd randomInverseWishart(Eigen::MatrixXd& sigma, int n)
