@@ -33,12 +33,9 @@ Eigen::MatrixXd randomInverseWishart(Eigen::MatrixXd& sigma, int n)
         scatter(i + 1) = sqrt(-2.0 * log(u1)) * sin(2.0 * M_PI * u2);
     }
     scatter(dim * n - 1) = randomNormal();
-    scatter = scatter * scatter.transpose();
-    scatter = scatter.inverse();
+    scatter = (scatter * scatter.transpose()).inverse();
 
     Eigen::MatrixXd L = sigma.llt().matrixL();
-    Eigen::MatrixXd variate(dim, dim);
-    variate = L * scatter * L.transpose();
-    return variate;
+    return L * scatter * L.transpose();
 }
 {% endhighlight %}
