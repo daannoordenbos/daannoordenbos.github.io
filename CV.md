@@ -10,9 +10,9 @@ layout: page
 
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
-Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)  <br>
 Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
-Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023)
+Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023) <br>
+Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
 
 
 **Data analyst, [Data Analytics Team](https://www.analyticsteam.nl/), Groningen**  <br />
@@ -27,6 +27,6 @@ Bricklaying and garden maintance, 32 hours per week (06/2021 - 08/2021)
 Stock clerk, 10 hours per week (07/06/2018 - 06/2019)
 
 # Technical skills
-- Comfortable with **Python** and **C++**.
+- Proficient with **Python** and comfortable with **C++**.
 - Proficient with **LaTeX**.
-- Proficient with **Excel**, Comfortable with **R** and have worked with **Stata**.
+- Proficient with **R**, comfortable with **Excel** and have worked with **Stata**.
