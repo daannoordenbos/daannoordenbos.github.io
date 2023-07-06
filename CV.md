@@ -5,18 +5,19 @@ layout: page
 ---
 
 # Education
-**BSc Bachelor Econometrics and Operations Research**, University of Groningen (2020-2023 (expected)). <br>
+**BSc Bachelor Econometrics and Operations Research**, University of Groningen (2020-2023). <br>
 **VWO Natuur en Techniek** (cum laude), Rudolph Pabus Cleveringa Lyceum (2014-2020).
 
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
+Introduction to Data Analytics, 15 hours per week (Undergraduate) (2024) <br>
 Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
 Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023) <br>
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
 
 
 **Data analyst, [Data Analytics Team](https://www.analyticsteam.nl/), Groningen**  <br />
-Data analysis, 5 hours per week (09/2022 - present)
+Data analysis, 5 hours per week (09/2022 - 07/2023)
 
 
 **Gardener, Hoveniersbedrijf Jonas Lindenhoff, Sappemeer** <br />
