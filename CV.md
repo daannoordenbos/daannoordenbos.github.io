@@ -11,7 +11,9 @@ Thesis: "[Efficiency of Hamiltonian Monte Carlo for Hierarchical Bayesian Mixed 
 
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
-Introduction to Data Analytics, 15 hours per week (Undergraduate) (2024) <br>
+Intermediate Mathematics, 8 hours per week (Undergraduate) (2023) <br>
+Difference- & Differential Equations, 4 hours per week (Undergraduate) (2023) <br>
+Introduction to Data Analytics, 15 hours per week (Undergraduate) (2023) <br>
 Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
 Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023) <br>
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
