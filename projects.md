@@ -1,6 +1,6 @@
 ---
-title: "Projects"
-permalink: "/projects/"
+title: "Games"
+permalink: "/games/"
 layout: page
 ---
 
