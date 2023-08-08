@@ -58,7 +58,7 @@ $$\mu_{\mathrm{MM}}=\frac{1}{k}\sum_{i=1}^{k}r_i=\bar{r}\text{, } s_{\mathrm{MM}
 
 Using this approximation for \\(F_X(t)\\) we can approximate \\(\hat{r}\\). Recall that for \\(\hat{r}\\) we have \\(F_X(\hat{r})=\frac{w}{k}\\). So \\(\hat{r}\approx L^{-1}\left(\frac{w}{k};\mu_{\mathrm{MM}},s_{\mathrm{MM}}\right)\\), which yields the following:
 
-$$\hat{r}\approx\bar{r}-\log\left(\frac{k}{w}-1\right)\sqrt{\left(\frac{400}{\log(10)}\right)^2+\frac{3}{\pi^2}\text{var}\left(r\right)}.$$
+$$\hat{r}\approx\bar{r}-\log_{10}\left(\frac{k}{w}-1\right)\sqrt{\left(\frac{400}{\log(10)}\right)^2+\frac{3}{\pi^2}\text{var}\left(r\right)}.$$
 
 # Illustrative example
 
