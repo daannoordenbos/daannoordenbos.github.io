@@ -10,7 +10,7 @@ Recently I played a chess tournament where I played against six opponents with r
 
 **Definition**: If player \\(A\\) has a rating of \\(r_A\\) and player \\(B\\) has a rating \\(r_B\\), then the expected score of \\(A\\) playing against \\(B\\) is given by the function \\(\text{We}(r_A-r_B)\\). Where \\(\text{We}(\cdot)\\) is a valid cumulative distribution function (CDF).
 
-**Definition**: If player \\(p\\) plays k games against players with ratings \\(\left\{r_1,\dots,r_k\right\}\\) and scores \\(w\\) points. Then the performance rating, \\(\hat{r}\\), is the rating at which the expected score is \\(w\\). That is,
+**Definition**: If player \\(p\\) plays k games against players with ratings \\(r_1,\dots,r_k\\) and scores \\(w\\) points. Then the performance rating, \\(\hat{r}\\), is the rating at which the expected score is \\(w\\). That is,
 	
 $$\sum_{i=1}^{k}\text{We}(\hat{r}-r_i)=w.$$
 
