@@ -60,4 +60,6 @@ Using this approximation for \\(F_X(t)\\) we can approximate \\(\hat{r}\\). Reca
 
 $$\hat{r}\approx\bar{r}-\log\left(\frac{k}{w}-1\right)\sqrt{\left(\frac{400}{\log(10)}\right)^2+\frac{3}{\pi^2}\text{var}\left(r\right)}.$$
 
+# Illustrative example
+
 The main advantage of this method shines when considering victories against significantly lower-rated opponents. For instance, take a player securing a 2/3 score against competitors rated at 2300, 2400, and 2100. In reality their TPR is 2403, the conventional method yields 2387, and the refined approach yields 2396. Now, when wins against opponents rated at 1300, 1500, and 1700 are taken into account, the true TPR increases to 2410. In contrast, the simple TPR plummets to 2163, whereas the refined TPR only decreases to 2342. Evidently, this method demonstrates remarkable resilience to extreme rating deviations, considering its simplicity.
