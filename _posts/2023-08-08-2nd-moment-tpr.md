@@ -32,7 +32,7 @@ the following is usually solved
 
 $$\text{We}\left(\hat{r}-\frac{1}{k}\sum_{i=1}^{k}r_i\right)=\frac{w}{k}.$$
 
-The latter can easily be solved and the solution is given by \\(\hat{r}=\bar{r}-400\log_{10}(k/w-1)\\). While this is a good approximation for when the opponent ratings are all very similar, it is not a good approximation when the opponent ratings are variable. The clear advantage however is that no sophisticated numerical methods are needed, making it something that can be computed in excel with ease. However I do not find this be an excuse, this simple method is in my opinion too simple and can be improved quite easily, still allowing it to be computed in excel.
+The latter can easily be solved and the solution is given by \\(\hat{r}=\bar{r}-400\log_{10}(k/w-1)\\). While this is a good approximation for when the opponent ratings are all very similar, it is not a good approximation when the opponent ratings are variable. The clear advantage however is that no sophisticated numerical methods are needed, making it something that can be computed in excel with ease. However I do not find this be an excuse, this simple method is in my opinion too simple and can be improved quite easily, while still allowing it to be computed in excel.
 
 # Modified approximation
 
