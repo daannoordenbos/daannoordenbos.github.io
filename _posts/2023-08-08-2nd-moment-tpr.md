@@ -51,7 +51,7 @@ Then, the first and second moments are \\(\mu\\) and \\(\frac{\pi^2}{3}s^2+\mu^2
 
 The first and second moments associated with the CDF \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) are \\(\mu_{\mathrm{MM}}\\) and \\(\frac{\pi^2}{3}\left(s^*\right)^2+\left(\mu_{\mathrm{MM}}\right)^2\\) respectively. The first and second moments associated with the CDF \\(F_X(t)\\) are given by
 
-$$\begin{align}&\text{First moment: }\int_{-\infty}^{\infty}t\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]=\frac{1}{k}\sum_{i=1}^{k}r_i\\&\text{Second moment: }\int_{-\infty}^{\infty}t^2\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t^2\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]=\\&\frac{1}{k}\sum_{i=1}^{k}\left(\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+r_i^2\right)=\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+\frac{1}{k}\sum_{i=1}^{k}r_i^2.\end{align}$$
+$$\begin{align}\text{First moment: }\int_{-\infty}^{\infty}t\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}r_i\\ \text{Second moment: }\int_{-\infty}^{\infty}t^2\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t^2\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}\left(\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+r_i^2\right)\\&=\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+\frac{1}{k}\sum_{i=1}^{k}r_i^2.\end{align}$$
 
 Solving for the conditions given by the moments we get that:
 
