@@ -6,7 +6,7 @@ layout: post
 
 # Introduction 
 
-Recently I played a chess tournament where I played against six opponents with ratings of 1859, 2265, 2263, 2155, 1841 and 2166. I scored 4 out of 6 and the pairing website gave this performance a TPR (tournament performance rating) of 2212, however as few might know, these performance ratings are not calculated correctly! The TPR is in fact 2245.
+Recently I played a chess tournament where I played against six opponents with ratings of 1859, 2265, 2263, 2155, 1841 and 2166. I scored 4 out of 6 and the pairing website gave this performance a TPR (tournament performance rating) of 2212, however as few might know, these performance ratings are not calculated correctly!
 To know why they are calculated incorrectly we need to first revise the definitions of expected score and performance rating.
 
 **Definition**: If player \\(A\\) has a rating of \\(r_A\\) and player \\(B\\) has a rating \\(r_B\\), then the expected score of \\(A\\) playing against \\(B\\) is given by the function \\(\text{We}(r_A-r_B)\\). Where \\(\text{We}(\cdot)\\) is a valid cumulative distribution function (CDF).
@@ -41,7 +41,7 @@ We are going to approximate \\(\frac{1}{k}\sum_{i=1}^{k}\text{We}(\hat{r}-r_i)\\
 
 $$F_X(t)=\frac{1}{k}\sum_{i=1}^{k}\frac{1}{1+10^{\frac{r_i-t}{400}}}.$$
 
-Furthermore, let \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) be the logistic CDF we are going to fit to \\(F_X(t)\\), with location parameter \\(\mu_{\mathrm{MM}}\\) and shape parameter \\(s_{\mathrm{MM}}\\). To fit \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) to \\(F_X(t)\\) for some \\(\mu_{\mathrm{MM}},s_{\mathrm{MM}}\\) we will use the method of moments. Take note of the following theorem.
+Furthermore, let \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) be the logistic CDF we are going to fit to \\(F_X(t)\\), with location parameter \\(\mu_{\mathrm{MM}}\\) and shape parameter \\(s_{\mathrm{MM}}\\). To fit \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) to \\(F_X(t)\\) for some \\(\mu_{\mathrm{MM}},s_{\mathrm{MM}}\\) we will use method of moments. To do so take note of the following theorem.
 
 **Theorem**: If a random variable has the following cumulative distribution function,
 
@@ -49,9 +49,9 @@ $$F(t)=\frac{1}{1+\exp(-(t-\mu)/s)}$$
 
 Then, the first and second moments are \\(\mu\\) and \\(\frac{\pi^2}{3}s^2+\mu^2\\) respectively.
 
-The first and second moments associated with the CDF \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) are \\(\mu_{\mathrm{MM}}\\) and \\(\frac{\pi^2}{3}\left(s_{\mathrm{MM}}\right)^2+\left(\mu_{\mathrm{MM}}\right)^2\\) respectively. The first and second moments associated with the CDF \\(F_X(t)\\) are given by
+The first and second moments associated with the CDF \\(L(t;\mu_{\mathrm{MM}},s_{\mathrm{MM}})\\) are \\(\mu_{\mathrm{MM}}\\) and \\(\frac{\pi^2}{3}s_{\mathrm{MM}}^2+\mu_{\mathrm{MM}}^2\\) respectively. The first and second moments associated with the CDF \\(F_X(t)\\) are given by
 
-$$\begin{align*}\text{First moment: }\int_{-\infty}^{\infty}t\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}r_i\\ \text{Second moment: }\int_{-\infty}^{\infty}t^2\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}F_X(t)&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t^2\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}\left(\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+r_i^2\right)\\&=\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+\frac{1}{k}\sum_{i=1}^{k}r_i^2.\end{align*}$$
+$$\begin{align*}\text{First moment: }\int_{-\infty}^{\infty}t\,\mathrm{d}F_X(t)&=\int_{-\infty}^{\infty}t\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}r_i\\ \text{Second moment: }\int_{-\infty}^{\infty}t^2\,\mathrm{d}F_X(t)&=\int_{-\infty}^{\infty}t^2\,\mathrm{d}\frac{1}{k}\sum_{i=1}^{k}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}\int_{-\infty}^{\infty}t^2\,\mathrm{d}\left[\frac{1}{1+\exp\left(-\log(10)(t-r_i)/400\right)}\right]\\&=\frac{1}{k}\sum_{i=1}^{k}\left(\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+r_i^2\right)\\&=\frac{\pi^2}{3}\frac{400^2}{\log^2(10)}+\frac{1}{k}\sum_{i=1}^{k}r_i^2.\end{align*}$$
 
 Solving for the conditions given by the moments we get that:
 
