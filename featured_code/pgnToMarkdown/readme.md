@@ -1,0 +1,1 @@
+This parser takes a .pgn file as input and produces a markdown document which is more readable than a plain pgn file. To include add '[D]' in the comments of the pgn file. Version two is a refinement of the original.
