@@ -38,8 +38,8 @@ layout: post
 
 14...g5 15.&#9815;f2 &#9813;xe5+ 16.&#9815;e2 fxe6 17.O-O White's activity proves to be too much. &#9816;c6 18.&#9814;xc6 bxc6 19.&#9815;h5+ &#9812;d8 20.&#9815;b6+ &#9812;e7 21.&#9814;f7+ &#9812;e8 22.&#9814;xd7# 
 
-**15.&#9815;e2** Black is in a lot of trouble, none of his pieces are contributing Here I stopped the line as black is clearly in a lot of trouble, his king is stuck in the middle of the board and his pieces are inactive. **&#9815;b4** 
+**15.&#9815;e2** Black is in a lot of trouble, none of his pieces are contributing. **&#9815;b4** 
 
 15...&#9816;c6 16.&#9816;d5 &#9815;d6 17.&#9816;xg7+ &#9813;xg7 18.&#9814;xc6 bxc6 19.&#9816;f6+ &#9816;xf6 20.&#9813;xd6 &#9815;e6 21.&#9815;f3 &#9814;c8 22.O-O &#9816;d5 23.&#9815;h5 &#9813;d4+ 24.&#9812;h1 
 
-**16.&#9814;xb4** **fxe6** **17.&#9813;g6+** **&#9812;f8** **18.O-O+** **&#9816;f6** **19.&#9815;xf6** **1 - 0**
+**16.&#9814;xb4** **fxe6** **17.&#9813;g6+** **&#9812;f8** **18.O-O+** **&#9816;f6** **19.&#9815;xf6** 1-0
