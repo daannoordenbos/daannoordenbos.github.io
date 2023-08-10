@@ -3,7 +3,7 @@ title: "A Sicilian miniature"
 layout: post
 ---
 
-# Daan Noordenbos (2140) - John Doe (2050)
+# Daan Noordenbos (2107) - John Doe (2050)
 ## Blitz, 2022.03.14
 
 **1.e4** **c5** **2.&#9816;f3** **d6** **3.d4** **cxd4** **4.&#9816;xd4** **&#9816;f6** **5.&#9816;c3** **a6** **6.&#9815;g5** **e6** **7.f4** **h6** 
