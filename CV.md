@@ -14,7 +14,7 @@ Thesis: "[Efficiency of Hamiltonian Monte Carlo for Hierarchical Bayesian Mixed 
 Intermediate Mathematics, 8 hours per week (Undergraduate) (2023) <br>
 Difference- & Differential Equations, 4 hours per week (Undergraduate) (2023) <br>
 Introduction to Data Analytics, 15 hours per week (Undergraduate) (2023) <br>
-Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
+Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023, 2024) <br>
 Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023) <br>
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
 
@@ -22,13 +22,6 @@ Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
 **Data analyst, [Data Analytics Team](https://www.analyticsteam.nl/), Groningen**  <br />
 Data analysis, 5 hours per week (09/2022 - 07/2023)
 
-
-**Gardener, Hoveniersbedrijf Jonas Lindenhoff, Sappemeer** <br />
-Bricklaying and garden maintance, 32 hours per week (06/2021 - 08/2021)
-
-
-**Stock clerk, AH Zweepe, Siddeburen** <br />
-Stock clerk, 10 hours per week (07/06/2018 - 06/2019)
 
 # Technical skills
 - Proficient with **Python** and comfortable with **C++**.
