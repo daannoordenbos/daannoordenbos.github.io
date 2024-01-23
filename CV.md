@@ -17,7 +17,7 @@ Difference- & Differential Equations, 4 hours per week (Undergraduate) (2023) <b
 Math II: Linear Algebra, 10 hours per week (Undergraduate) (2023) <br>
 Introduction to Data Analytics, 15 hours per week (Undergraduate) (2023) <br>
 Linear Algebra for EOR, 8 hours per week (Undergraduate) (2023) <br>
-Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023) <br>
+Queueing Theory and Simulation, 15 hours per week (Undergraduate) (2023, 2024) <br>
 Multivariate Calculus, 10 hours per week (Undergraduate) (2022, 2023)
 
 
