@@ -5,7 +5,8 @@ layout: page
 ---
 
 # Education
-**MSc in Econometrics, Operations Research and Actuarial Studies**, University of Groningen (2023-2024). <br>
+**MSc in Econometrics, Operations Research and Actuarial Studies**, (summa cum laude) University of Groningen (2023-2024). <br>
+Thesis: "[Optimal Strategies for Olympic Weightlifting](https://daannoordenbos.github.io/master-thesis/)". <br>
 **BSc in Econometrics and Operations Research**, University of Groningen (2020-2023). <br>
 Thesis: "[Efficiency of Hamiltonian Monte Carlo for Hierarchical Bayesian Mixed Logit Estimation](https://daannoordenbos.github.io/bachelor-thesis/)". <br>
 **VWO Natuur en Techniek** (cum laude), Rudolph Pabus Cleveringa Lyceum (2014-2020).
