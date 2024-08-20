@@ -5,6 +5,7 @@ layout: page
 ---
 
 # Education
+**PhD in Operations Research**, Tilburg University (2024-present). <br>
 **MSc in Econometrics, Operations Research and Actuarial Studies**, (summa cum laude) University of Groningen (2023-2024). <br>
 Thesis: [Optimal Strategies for Olympic Weightlifting](https://daannoordenbos.github.io/master-thesis/). <br>
 **BSc in Econometrics and Operations Research**, University of Groningen (2020-2023). <br>
