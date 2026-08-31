@@ -19,6 +19,7 @@ mathjax: true
 navigation:                # accepts {file, title, url, icon, sidebaricon}
   - {file: "index.md"}
   - {file: "CV.md"}
+  - {file: "research.md"}
   - {file: "games.md"}
   - {file: "archive.html"}
 
