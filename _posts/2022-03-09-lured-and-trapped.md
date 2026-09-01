@@ -1,9 +1,8 @@
 ---
-title: "Lured and trapped: A poisoned rook"
+title: "Lured and trapped: a poisoned rook"
 layout: post
 ---
-This is a blitz game that I recently played, the game has been altered slightly to better show the idea.
-
+I recently played a messy blitz game with a remarkable idea. Here I present the game with the moves slightly altered to better show the idea.
 
 # Anatoly Donchenko (2233) - Daan Noordenbos (2107)
 ## Online Blitz, 2022.03.09
