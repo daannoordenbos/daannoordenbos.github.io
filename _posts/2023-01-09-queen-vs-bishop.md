@@ -1,9 +1,9 @@
 ---
-title: "Coronation inevitable: Passed pawns pack a punch"
+title: "Lone queen versus a horde of pawns"
 layout: post
 ---
 
-In this (blitz) game I sacrificed my queen to avoid dull suffering, the result was a marvelous swindle.
+In this (blitz) game I sacrificed my queen to avoid dull suffering, the result was a marvellous swindle.
 
 # Daan Noordenbos (2465) - FutureFMfromTR (2513)
 ## Online Blitz (1), 2021.02.04
