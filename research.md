@@ -38,7 +38,7 @@ This thesis compares Hamiltonian Monte Carlo (HMC) with random walk Metropolis-H
 
 ## Other Research
 
-In addition to my formal publications, I have worked on several smaller research projects, including [an analysis of a randomised policy for a simple game](https://daannoordenbos.github.io/flood-it/) and an [investigation into the winning probabilities in Snakes and Ladders](https://daannoordenbos.github.io/snakes-ladders/).
+In addition to my formal publications, I have worked on several smaller research projects, including [an analysis of a randomised policy for a simple game](https://daannoordenbos.github.io/flood-it/) and [an investigation into the winning probabilities in Snakes and Ladders](https://daannoordenbos.github.io/snakes-ladders/).
 
 
 
