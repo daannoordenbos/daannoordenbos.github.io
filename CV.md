@@ -15,13 +15,13 @@ Thesis: [Efficiency of Hamiltonian Monte Carlo for Hierarchical Bayesian Mixed L
 
 # Work experience
 **Teaching Assistant, University of Groningen** <br />
-Intermediate Mathematics (2023) <br>
-Difference- & Differential Equations (2023) <br>
-Math II: Linear Algebra (2023) <br>
-Introduction to Data Analytics (2023) <br>
-Linear Algebra for EOR (2023) <br>
-Queueing Theory and Simulation (2023, 2024) <br>
-Multivariate Calculus (2022, 2023)
+- Intermediate Mathematics (2023) <br>
+- Difference- & Differential Equations (2023) <br>
+- Math II: Linear Algebra (2023) <br>
+- Introduction to Data Analytics (2023) <br>
+- Linear Algebra for EOR (2023) <br>
+- Queueing Theory and Simulation (2023, 2024) <br>
+- Multivariate Calculus (2022, 2023)
 
 
 # Technical skills
