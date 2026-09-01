@@ -24,7 +24,7 @@ We study an optimal stopping problem with \\(n\\) correlated offers when only th
 
 Groningen, 2024
 
-We model competitive Olympic weightlifting as a Markov decision process and use game theory to determine strategies that maximize the probability of winning. We identify the relevant subgames, prove the uniqueness of their perfect equilibrium, and provide an efficient algorithm for computing it.
+In this thesis competitive Olympic weightlifting is modelled as a Markov decision process and game-theoretic methods are used to determine strategies that maximise the probability of winning. The relevant subgames are identified, the uniqueness of their perfect equilibrium is established, and an efficient algorithm for computing it is provided.
 
 [Thesis](https://daannoordenbos.github.io/master-thesis/)
 
@@ -38,7 +38,7 @@ This thesis compares Hamiltonian Monte Carlo (HMC) with random walk Metropolis-H
 
 ## Other Research
 
-In addition to my formal publications, I have worked on several smaller research projects, including [an analysis of a randomized policy for a simple game](https://daannoordenbos.github.io/flood-it/) and an [investigation into the winning probabilities in Snakes and Ladders](https://daannoordenbos.github.io/snakes-ladders/).
+In addition to my formal publications, I have worked on several smaller research projects, including [an analysis of a randomised policy for a simple game](https://daannoordenbos.github.io/flood-it/) and an [investigation into the winning probabilities in Snakes and Ladders](https://daannoordenbos.github.io/snakes-ladders/).
 
 
 
